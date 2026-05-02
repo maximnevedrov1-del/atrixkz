@@ -1,0 +1,13 @@
+User-agent: *
+Allow: /
+
+# Block temp and admin paths
+Disallow: /admin/
+Disallow: /tmp/
+Disallow: /wp-admin/
+
+# Sitemap
+Sitemap: https://atrixkz.kz/sitemap.xml
+
+# Crawl-delay for polite bots
+Crawl-delay: 1
