@@ -1,13 +1,42 @@
 User-agent: *
 Allow: /
 
+# AI Search Crawlers — explicitly allowed
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-SearchBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Googlebot
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
 # Block temp and admin paths
+User-agent: *
 Disallow: /admin/
 Disallow: /tmp/
 Disallow: /wp-admin/
 
 # Sitemap
 Sitemap: https://atrixkz.kz/sitemap.xml
-
-# Crawl-delay for polite bots
-Crawl-delay: 1
