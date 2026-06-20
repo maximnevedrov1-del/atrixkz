@@ -43,3 +43,6 @@ https://atrixkz.kz/blog/ — главная страница блога с 222+ 
 
 ## Сертификаты
 https://atrixkz.kz/certificates.html — все сертификаты TÜV Rheinland, CE, UKCA, ESD IEC 61340
+
+## Решения по отраслям и компаниям
+https://atrixkz.kz/resheniya-po-otraslyam.html — каталог решений Atrix для банков (Kaspi, Halyk, Freedom, Jusan, ForteBank, Bereke, БЦК, Eurasian), телекома (Kcell, Beeline, Tele2/Altel, Казахтелеком, Transtelecom, Jusan Mobile), медицины (лаборатории Олимп/Invivo, фарма SANTO/Nobel/Abdi Ibrahim, ИВФ ИРМ/Ecomed, хирургия, стоматология, зуботехника, производство медизделий), нефтегаза и металлургии (Тенгизшевройл/ТШО, NCOC/Кашаган, Карачаганак/КПО, КазМунайГаз, КазАтомПром, Казахмыс, Казцинк, QARMET) и по городам.

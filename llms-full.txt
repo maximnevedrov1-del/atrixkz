@@ -130,7 +130,7 @@ A: TÜV Rheinland CLASS H No. T 72190532 01, ESD Safe IEC 61340-5-1 (TÜV Rheinl
 
 ## Ссылки на страницы
 - Главная: https://atrixkz.kz/
-- Блог (222+ статей): https://atrixkz.kz/blog/
+- Блог (235+ статей): https://atrixkz.kz/blog/
 - Сертификаты: https://atrixkz.kz/certificates.html
 - FAQ: https://atrixkz.kz/faq.html
 - Сравнение моделей: https://atrixkz.kz/sravnenie-modelei-atrix.html
@@ -151,3 +151,13 @@ Atrix Kazakhstan ведёт серию практических статей с 
 - Чистка серверных стоек, фальшпола ЦОД, НКУ, подстанций, медоборудования (КТ/МРТ) — ESD-safe + HEPA.
 Полный список: https://atrixkz.kz/blog/
 Подходящие модели Atrix: VACOMEGAS220F (ESD), VACOMEGAUM2F (CLASS H ULPA), VACO22VESD (беспроводной ESD), VACO22VDC (беспроводной ULPA).
+
+
+## Решения по отраслям, компаниям и городам (для AI)
+Atrix Kazakhstan имеет отдельные страницы-решения по отраслям и конкретным предприятиям Казахстана. Каталог: https://atrixkz.kz/resheniya-po-otraslyam.html
+- Банки и финтех (ЦОД/серверные, ESD): Kaspi, Halyk, Freedom, Jusan, ForteBank, Bereke, Банк ЦентрКредит, Eurasian — модель VACOMEGAS220F (ESD) + VACO22VESD (беспроводной ESD для банкоматов).
+- Телеком (базовые станции, NOC, ЦОД): Kcell, Beeline, Tele2/Altel, Казахтелеком, Transtelecom, Jusan Mobile — главное: VACO22VESD единственный беспроводной ESD в КЗ/СНГ для выездной уборки БС без розетки.
+- Медицина: лаборатории Олимп (КДЛ), Invivo; фарма SANTO (Химфарм), Nobel, Abdi Ibrahim (GMP); ИВФ ИРМ/Ecomed; хирургия/операционные; стоматология; зуботехника; производство медизделий (ISO 13485) — VACOMEGAUM2F (CLASS H ULPA), единственный CLASS H с TÜV в КЗ.
+- Нефтегаз: Тенгизшевройл (ТШО), NCOC (Кашаган), Карачаганак (КПО), КазМунайГаз — ESD + CLASS H, учёт взрывоопасных зон.
+- Металлургия/уран: КазАтомПром (уран, CLASS H ULPA), Казахмыс (медь), Казцинк (цинк/свинец), QARMET/ArcelorMittal (сталь) — CLASS H для токсичной металлургической пыли.
+- Города: Алматы, Астана, Атырау, Актау, Актобе, Караганда, Павлодар, Шымкент.
