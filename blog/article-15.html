@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="ru"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Стандарты чистоты для ЦОД: от ANSI/TIA-942 до ISO 14644 Class 8 — Atrix KZ</title>
+<meta name="description" content="** Обзор стандартов чистоты ЦОД: ANSI/TIA-942, ISO 14644 Class 8, ASHRAE. Источники загрязнения, уборка подполья, ESD-методы и периодичность.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://atrixkz.kz/blog/article-15.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Стандарты чистоты для ЦОД: от ANSI/TIA-942 до ISO 14644 Class 8 — Atrix KZ">
+<meta property="og:description" content="** Обзор стандартов чистоты ЦОД: ANSI/TIA-942, ISO 14644 Class 8, ASHRAE. Источники загрязнения, уборка подполья, ESD-методы и периодичность.">
+<meta property="og:url" content="https://atrixkz.kz/blog/article-15.html">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<style>:root{--bg:#030508;--bg-elevated:#0a0f1a;--bg-card:#111827;--border:#1f2937;--gold:#e8b94a;--gold-hover:#d4a843;--white:#f9fafb;--muted:#9ca3af;--blue:#3b82f6;--green:#10b981;--radius:16px}*{margin:0;padding:0;box-sizing:border-box}body{font-family:'Inter',system-ui,sans-serif;background:var(--bg);color:var(--white);line-height:1.7;font-size:16px;-webkit-font-smoothing:antialiased}a{color:var(--gold);text-decoration:none;transition:opacity .2s}a:hover{opacity:.8}
+.nav{position:fixed;top:0;left:0;right:0;z-index:1000;padding:0 48px;height:72px;display:flex;align-items:center;justify-content:space-between;background:linear-gradient(180deg,rgba(3,5,8,.9) 0%,rgba(3,5,8,0) 100%);backdrop-filter:blur(20px);border-bottom:1px solid rgba(255,255,255,.04)}
+.nav-logo{font-size:22px;font-weight:900;letter-spacing:-.5px;color:var(--white)}.nav-logo span{color:var(--gold)}
+.nav-links{display:flex;align-items:center;gap:36px;list-style:none}.nav-links a{color:var(--muted);font-size:14px;font-weight:500;letter-spacing:.02em;text-transform:uppercase;transition:color .2s}.nav-links a:hover{color:var(--white)}
+.nav-cta{background:var(--gold);color:#000!important;padding:10px 24px;border-radius:100px;font-size:13px!important;font-weight:700!important;letter-spacing:.05em!important;text-transform:uppercase!important}
+.burger{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:5px}.burger span{width:24px;height:2px;background:var(--white);border-radius:2px}
+.article{max-width:800px;margin:0 auto;padding:120px 48px 80px}
+.article h1{font-size:clamp(28px,4vw,42px);font-weight:800;line-height:1.15;letter-spacing:-.02em;margin-bottom:20px}
+.article .meta{color:var(--muted);font-size:14px;margin-bottom:40px;padding-bottom:24px;border-bottom:1px solid var(--border)}
+.article h2{font-size:clamp(22px,3vw,28px);font-weight:700;margin:48px 0 16px;letter-spacing:-.01em}
+.article h3{font-size:20px;font-weight:600;margin:32px 0 12px}
+.article p{margin-bottom:16px;color:var(--muted);line-height:1.8}
+.article p strong{color:var(--white)}.article ul,.article ol{margin:16px 0 24px 24px;color:var(--muted);line-height:1.8}
+.article li{margin-bottom:8px}.article li strong{color:var(--white)}
+.article blockquote{border-left:3px solid var(--gold);padding:16px 24px;margin:24px 0;background:var(--bg-card);border-radius:0 8px 8px 0}
+.article blockquote p{color:var(--white);margin-bottom:8px}.article blockquote p:last-child{margin-bottom:0}
+.table-wrap{overflow-x:auto;margin:24px 0}.article table{width:100%;border-collapse:collapse;font-size:15px}
+.article th{padding:14px 18px;text-align:left;font-weight:600;color:var(--gold);border-bottom:2px solid var(--border);font-size:13px;letter-spacing:.05em;text-transform:uppercase;background:var(--bg-card)}
+.article td{padding:12px 18px;border-bottom:1px solid var(--border);color:var(--muted)}.article td strong{color:var(--white)}
+.article tr:hover td{background:rgba(255,255,255,.02)}
+.cta-box{background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius);padding:32px;margin:48px 0;text-align:center}
+.cta-box h3{font-size:22px;font-weight:700;margin-bottom:12px;color:var(--gold)}
+.cta-box p{font-size:16px;margin-bottom:20px}
+.btn{display:inline-block;background:var(--gold);color:#000;padding:14px 32px;border-radius:100px;font-weight:700;font-size:15px;transition:all .3s;text-decoration:none}
+.btn:hover{background:var(--gold-hover);transform:translateY(-2px)}
+.footer{padding:40px 48px;background:var(--bg);border-top:1px solid var(--border);text-align:center;color:var(--muted);font-size:14px}
+@media(max-width:768px){.nav{padding:0 20px;height:60px}.nav-links{display:none}.burger{display:flex}.nav-cta{display:none}.article{padding:80px 20px 40px}}
+</style>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Стандарты чистоты для ЦОД: от ANSI/TIA-942 до ISO 14644 Class 8","description":"** Обзор стандартов чистоты ЦОД: ANSI/TIA-942, ISO 14644 Class 8, ASHRAE. Источники загрязнения, уборка подполья, ESD-методы и периодичность.","url":"https://atrixkz.kz/blog/article-15.html","datePublished":"2026-07-09","author":{"@type":"Organization","name":"Atrix Kazakhstan"},"publisher":{"@type":"Organization","name":"Atrix KZ"}}</script>
+</head>
+<body>
+<nav class="nav"><a href="/" class="nav-logo">ATRIX<span style="color:var(--gold)">KZ</span></a><ul class="nav-links"><li><a href="/sravnenie-modelei-atrix.html">Продукты</a></li><li><a href="/blog/">Блог</a></li><li><a href="/contacts.html">Контакты</a></li></ul><a href="/kp-form.html" class="nav-cta">Получить КП</a><button class="burger" aria-label="Меню"><span></span><span></span><span></span></button></nav>
+<article class="article">
+<h1>Стандарты чистоты для ЦОД: от ANSI/TIA-942 до ISO 14644 Class 8</h1>
+
+
+<p>Центр обработки данных (ЦОД) — это технологическое сердце современного бизнеса. Серверы, системы хранения, сетевое оборудование и системы охлаждения работают в режиме 24/7/365, и любой простой может обойтись компании в миллионы долларов. Однако не все понимают, что <strong>чистота</strong> — один из ключевых факторов надёжности ЦОД. Пыль, волокна, коррозионные газы и электростатические разряды способны вызвать отказы оборудования, снижение производительности и преждевременный выход из строя критически важных компонентов.</p>
+<p>В этой статье мы системно разберём стандарты чистоты для ЦОД: ANSI/TIA-942, ISO 14644-1 Class 8, рекомендации ASHRAE и практические аспекты организации уборки дата-центров.</p>
+<h2>ANSI/TIA-942: структура стандарта и требования к чистоте</h2>
+<p><strong>ANSI/TIA-942-B</strong> — американский национальный стандарт, регламентирующий инфраструктуру центров обработки данных. Стандарт определяет четыре уровня надёжности (Rated tiers — 1, 2, 3, 4) и устанавливает требования к помещениям, инженерным системам и эксплуатации.</p>
+<h3>Уровни ANSI/TIA-942 и требования к окружающей среде</h3>
+<p>|----------|--------|--------|--------|--------|</p>
+<div class="table-wrap"><table>
+<tr><th>Параметр</th><th>Tier 1</th><th>Tier 2</th><th>Tier 3</th><th>Tier 4</th></tr>
+<tr><td>Избыточность</td><td>Нет (N)</td><td>Частичная (N+1)</td><td>N+1, одновременное обслуживание</td><td>2N+1, отказоустойчивый</td></tr>
+<tr><td>Допустимый простой</td><td>28,8 ч/год</td><td>22 ч/год</td><td>1,6 ч/год</td><td>< 0,4 ч/год</td></tr>
+<tr><td>Температура</td><td>18–27 °C</td><td>18–27 °C</td><td>18–27 °C</td><td>18–27 °C</td></tr>
+<tr><td>Относительная влажность</td><td>40–55 %</td><td>40–55 %</td><td>40–55 %</td><td>40–55 %</td></tr>
+<tr><td>Класс чистоты</td><td>ISO 8</td><td>ISO 8</td><td>ISO 8</td><td>ISO 7–8</td></tr>
+<tr><td>Мониторинг частиц</td><td>Нет</td><td>Рекомендуется</td><td>Обязателен</td><td>Обязателен</td></tr>
+</table></div>
+<blockquote>
+<p>Стандарт ANSI/TIA-942 напрямую не определяет класс чистоты воздуха, но рекомендует поддерживать уровень загрязнённости, соответствующий <strong>ISO 14644-1 Class 8</strong> как минимум для всех Tier. Для Tier 3 и Tier 4 допускается повышение требований до Class 7 в критических зонах.</p>
+</blockquote>
+<h3>Дополнительные требования ANSI/TIA-942</h3>
+<ol>
+<li><strong>Positive pressurization</strong> — избыточное давление в машинном зале относительно коридоров и вспомогательных помещений (минимум 5 Па);</li>
+<li><strong>Воздушные заслонки</strong> — автоматические двери и воздушные шлюзы для минимизации притока пыли;</li>
+<li><strong>Отсутствие окон</strong> — в машинных залах Tier 2+ окна не допускаются;</li>
+<li><strong>Материалы отделки</strong> — антистатические, невыделяющие частицы, моющиеся;</li>
+<li><strong>Подпольное пространство</strong> — контроль чистоты под фальшполом обязателен для Tier 3+.</li>
+</ol>
+<h2>ISO 14644-1 Class 8 для ЦОД</h2>
+<p><strong>ISO 14644-1 Class 8</strong> — это наиболее распространённый стандарт чистоты воздуха для центров обработки данных. Он определяет допустимую концентрацию взвешенных частиц в машинном зале.</p>
+<h3>Лимиты ISO 14644 Class 8</h3>
+<p>|--------------|--------------------------------------|</p>
+<div class="table-wrap"><table>
+<tr><th>Размер частиц</th><th>Максимальная концентрация (частиц/м³)</th></tr>
+<tr><td>≥ 0,5 мкм</td><td>3 520 000</td></tr>
+<tr><td>≥ 1,0 мкм</td><td>832 000</td></tr>
+<tr><td>≥ 5,0 мкм</td><td>29 300</td></tr>
+</table></div>
+<p>На практике это означает: воздух в ЦОД должен быть чище, чем в обычном офисе, но не требует такой стерильности, как в фармацевтических cleanroom. Основная задача — <strong>минимизация частиц, способных вызвать коррозию, перегрев или электростатические разряды</strong>.</p>
+<h3>Почему именно Class 8?</h3>
+<ul>
+<li>оборудование ЦОД работает при температуре 18–27 °C и влажности 40–55 % — в этих условиях концентрация частиц естественным образом ниже, чем в обычных помещениях;</li>
+<li>серверное оборудование имеет собственные фильтры (вентиляторы с фильтрующими решётками);</li>
+<li>избыточное давление и высокий воздухообмен (ACH ≥ 15) обеспечивают постоянный вымыв частиц.</li>
+</ul>
+<p>Тем не менее, многие гиперскейлеры (Google, Microsoft, Amazon) внутренне устанавливают стандарты, соответствующие <strong>ISO 7</strong> или даже <strong>ISO 6</strong> в зонах с наиболее чувствительным оборудованием.</p>
+<h2>Рекомендации ASHRAE для ЦОД</h2>
+<p><strong>ASHRAE TC 9.9</strong> (American Society of Heating, Refrigerating and Air-Conditioning Engineers) — наиболее авторитетный источник рекомендаций по климатическим параметрам для дата-центров.</p>
+<h3>Классификация окружающей среды ASHRAE</h3>
+<p>|-------|----------|-------------|-----------|</p>
+<div class="table-wrap"><table>
+<tr><th>Класс</th><th>Описание</th><th>Температура</th><th>Влажность</th></tr>
+<tr><td>Class A1</td><td>Корпоративные серверы, СХД</td><td>15–32 °C</td><td>20–80 % RH</td></tr>
+<tr><td>Class A2</td><td>Оптимизированные серверы</td><td>10–35 °C</td><td>20–80 % RH</td></tr>
+<tr><td>Class A3</td><td>Расширенный диапазон</td><td>5–40 °C</td><td>8–85 % RH</td></tr>
+<tr><td>Class A4</td><td>Широкий диапазон</td><td>5–45 °C</td><td>8–90 % RH</td></tr>
+</table></div>
+<p>Дополнительно ASHRAE определяет <strong>классы загрязнения воздуха</strong>:</p>
+<h3>Таблица 1. Классы чистоты воздуха ASHRAE (gaseous and particulate contamination)</h3>
+<p>|---------|-------------------|---------------------|------------|</p>
+<div class="table-wrap"><table>
+<tr><th>Уровень</th><th>Частицы (ISO 14644)</th><th>Газовые загрязнители</th><th>Применение</th></tr>
+<tr><td>Level 1 (Clean)</td><td>ISO 8</td><td>Не обнаружены</td><td>Стандартный ЦОД</td></tr>
+<tr><td>Level 2 (Moderate)</td><td>ISO 8–9</td><td>Низкая концентрация</td><td>Типичный офис</td></tr>
+<tr><td>Level 3 (Harsh)</td><td>> ISO 9</td><td>Высокая концентрация</td><td>Промышленная зона</td></tr>
+<tr><td>Level 4 (Severe)</td><td>—</td><td>Агрессивные газы</td><td>Химическое производство</td></tr>
+</table></div>
+<p>Для ЦОД ASHRAE рекомендует поддерживать <strong>Level 1 (Clean)</strong> — это соответствует ISO 14644 Class 8 и отсутствию коррозионно-активных газов (сероводород, диоксид серы, хлористый водород).</p>
+<h3>Коррозионный тест «Coupon»</h3>
+<p>ASHRAE рекомендует метод <strong>ISA-71.04-2013</strong> для оценки коррозионной активности воздуха:</p>
+<ul>
+<li>медные и серебряные пластины (coupons) размещаются в ЦОД на 30 дней;</li>
+<li>после экспозиции измеряется толщина коррозионного слоя;</li>
+<li><strong>G1 ( Mild)</strong> — приемлемо для ЦОД (< 300 Å);</li>
+<li><strong>G2 (Moderate)</strong> — требует внимания;</li>
+<li><strong>G3–G4</strong> — критично, требуется очистка воздуха.</li>
+</ul>
+<h2>Источники загрязнения в ЦОД</h2>
+<h3>Внешние источники</h3>
+<p>|----------|----------------|--------------|</p>
+<div class="table-wrap"><table>
+<tr><th>Источник</th><th>Тип загрязнения</th><th>Меры контроля</th></tr>
+<tr><td>Внешний воздух через приток</td><td>Пыль, пыльца, выхлопы</td><td>Фильтры G4+F7, активированный уголь</td></tr>
+<tr><td>Персонал</td><td>Частицы кожи, волокна одежды</td><td>Антистатическая одежда, воздушные шлюзы</td></tr>
+<tr><td>Поставляемое оборудование</td><td>Пыль с завода, упаковочные материалы</td><td>Проверка при приёмке, очистка перед установкой</td></tr>
+<tr><td>Строительные материалы</td><td>Волокна, пыль цемента</td><td>Герметичный фальшпол, влажная уборка после ремонта</td></tr>
+</table></div>
+<h3>Внутренние источники</h3>
+<p>|----------|----------------|--------------|</p>
+<div class="table-wrap"><table>
+<tr><th>Источник</th><th>Тип загрязнения</th><th>Меры контроля</th></tr>
+<tr><td>Бумага и картон</td><td>Целлюлозные волокна</td><td>Запрет бумаги в машинном зале</td></tr>
+<tr><td>Принтеры и МФУ</td><td>Тонер, бумажная пыль</td><td>Вынесение в отдельное помещение</td></tr>
+<tr><td>Системы охлаждения</td><td>Пыль с конденсаторов, коррозия</td><td>Регулярная чистка, фильтрация</td></tr>
+<tr><td>Фальшпол и подполье</td><td>Накопленная пыль, волокна</td><td>Вакуумная уборка Class H</td></tr>
+<tr><td>Кабельные трассы</td><td>ПВХ выделения, пыль</td><td>ESD-safe кабели, регулярная уборка</td></tr>
+<tr><td>Ионизаторы (неисправные)</td><td>Накопление заряда</td><td>Еженедельный контроль</td></tr>
+</table></div>
+<h3>Таблица 2. Распределение загрязнений по зонам ЦОД</h3>
+<p>|------|---------------------|-----------------|</p>
+<div class="table-wrap"><table>
+<tr><th>Зона</th><th>Основные загрязнители</th><th>Приоритет уборки</th></tr>
+<tr><td>Машинный зал (фальшпол)</td><td>Пыль, волокна, металлические частицы</td><td>Критический</td></tr>
+<tr><td>Подпольное пространство</td><td>Накопленная пыль, конденсат, плесень</td><td>Критический</td></tr>
+<tr><td>Зона размещения СХД</td><td>Магнитная пыль, волокна</td><td>Высокий</td></tr>
+<tr><td>Зона маршрутизаторов</td><td>Пыль, волокна, тепловой налёт</td><td>Высокий</td></tr>
+<tr><td>Зона ИБП и электрощитов</td><td>Сажа, металлическая пыль</td><td>Высокий</td></tr>
+<tr><td>Коридоры и входные зоны</td><td>Пыль с обуви, внешние частицы</td><td>Средний</td></tr>
+<tr><td>Комната управления (NOC)</td><td>Бумажная пыль, частицы кожи</td><td>Средний</td></tr>
+</table></div>
+<h2>Уборка подпольного пространства (subfloor cleaning)</h2>
+<p>Подпольное пространство (plenum) под фальшполом — это <strong>критически важная зона</strong>, которую часто игнорируют. Именно здесь циркулирует охлаждающий воздух, подаваемый к серверам через перфорированные плиты.</p>
+<h3>Почему подполье так важно</h3>
+<ul>
+<li>воздух из подполья напрямую поступает в серверные стойки;</li>
+<li>пыль из подполья оседает на компонентах серверов;</li>
+<li>накопленная пыль снижает эффективность охлаждения;</li>
+<li>влага + пыль = коррозия медных контактов и печатных плат.</li>
+</ul>
+<h3>Процедура уборки подполья</h3>
+<ol>
+<li><strong>Подготовка</strong></li>
+</ol>
+<ul>
+<li>Уведомить все службы (эксплуатация, сетевые администраторы);</li>
+<li>Проверить работу датчиков пожаротушения;</li>
+<li>Подготовить ESD-safe пылесос с HEPA H14 фильтром.</li>
+</ul>
+<ol>
+<li><strong>Уборка</strong></li>
+</ol>
+<ul>
+<li>Аккуратно снять перфорированные плиты (начиная с дальних);</li>
+<li>Пылесосить с максимальной мощности, медленно;</li>
+<li>Особое внимание — углы, стыки, зоны под кабельными лотками;</li>
+<li>Не допускать повреждения кабелей и труб;</li>
+<li>Снятые плиты очистить отдельно (влажная уборка).</li>
+</ul>
+<ol>
+<li><strong>Завершение</strong></li>
+</ol>
+<ul>
+<li>Установить плиты на место;</li>
+<li>Проверить уровень чистоты (визуально и прибором);</li>
+<li>Зафиксировать в журнале.</li>
+</ul>
+<h3>Таблица 3. Рекомендуемая периодичность уборки ЦОД</h3>
+<p>|-----------|----------|--------|--------|-----------|</p>
+<div class="table-wrap"><table>
+<tr><th>Вид уборки</th><th>Tier 1–2</th><th>Tier 3</th><th>Tier 4</th><th>Примечание</th></tr>
+<tr><td>Вакуумная уборка фальшпола</td><td>1 раз в квартал</td><td>1 раз в месяц</td><td>1 раз в 2 недели</td><td>HEPA-пылесос, ESD-safe</td></tr>
+<tr><td>Уборка подпольного пространства</td><td>1 раз в полгода</td><td>1 раз в квартал</td><td>1 раз в месяц</td><td>Только HEPA Class H</td></tr>
+<tr><td>Поверхности стоек и оборудования</td><td>1 раз в месяц</td><td>1 раз в 2 недели</td><td>Еженедельно</td><td>ESD-safe салфетки, спирт 70 %</td></tr>
+<tr><td>Воздухозаборники серверов</td><td>1 раз в квартал</td><td>1 раз в месяц</td><td>1 раз в 2 недели</td><td>Сжатый воздух или пылесос</td></tr>
+<tr><td>Замена фильтров HVAC</td><td>По дифф. давлению</td><td>По дифф. давлению</td><td>По графику</td><td>Запасные фильтры на складе</td></tr>
+<tr><td>Полный аудит чистоты</td><td>1 раз в год</td><td>1 раз в полгода</td><td>1 раз в квартал</td><td>Измерение частиц, коррозионные тесты</td></tr>
+</table></div>
+<h2>ESD-safe методы уборки ЦОД</h2>
+<p>Электростатический разряд — вторая по значимости причина отказов оборудования в ЦОД после перегрева. Уборка в дата-центре <strong>обязательно</strong> должна выполняться с соблюдением ESD-протоколов.</p>
+<h3>Требования к персоналу</h3>
+<ul>
+<li>ESD-браслет с сопротивлением 1 МОм, подключённый к заземлённой точке;</li>
+<li>Антистатическая одежда (халат или комбинезон);</li>
+<li>ESD-обувь или бахилы с антистатической подошвой;</li>
+<li>Отсутствие синтетических материалов в одежде.</li>
+</ul>
+<h3>Требования к оборудованию</h3>
+<p>|----------|-----------|</p>
+<div class="table-wrap"><table>
+<tr><th>Параметр</th><th>Требование</th></tr>
+<tr><td>Сопротивление корпуса пылесоса PTG</td><td>10⁶–10⁹ Ом</td></tr>
+<tr><td>Сопротивление шланга</td><td>10⁶–10⁹ Ом</td></tr>
+<tr><td>Заземление</td><td>Через IEC 60309 штекер</td></tr>
+<tr><td>Фильтрация</td><td>HEPA H13 минимум, H14 рекомендуется</td></tr>
+<tr><td>Материал корпуса</td><td>Нержавеющая сталь</td></tr>
+<tr><td>Материал шланга</td><td>ESD-safe полиуретан</td></tr>
+<tr><td>Щётки и насадки</td><td>ESD-safe, сопротивление 10⁶–10⁹ Ом</td></tr>
+<tr><td>Бесщёточный двигатель</td><td>Обязательно</td></tr>
+</table></div>
+<h3>Методика ESD-safe уборки</h3>
+<ol>
+<li><strong>Ионизация</strong> — включить ионизаторы за 5 минут до уборки;</li>
+<li><strong>Сверху вниз</strong> — начинать с верхних поверхностей стоек;</li>
+<li><strong>Внутрь наружу</strong> — от центрального прохода к стенам;</li>
+<li><strong>Медленно</strong> — скорость перемещения пылесоса не более 0,5 м/с;</li>
+<li><strong>Без резких движений</strong> — исключение турбулентности воздуха;</li>
+<li><strong>После уборки</strong> — повторная ионизация 10 минут.</li>
+</ol>
+<h2>NVIDIA, Oracle и другие: требования вендоров оборудования</h2>
+<p>Ведущие производители оборудования для ЦОД формулируют собственные требования к окружающей среде, которые часто превышают отраслевые стандарты.</p>
+<h3>NVIDIA DGX Systems</h3>
+<ul>
+<li>Температура: 5–30 °C (рекомендуется 18–25 °C);</li>
+<li>Влажность: 20–80 % RH без конденсации;</li>
+<li>Чистота: ISO 14644 Class 8, фильтрация HVAC ≥ MERV 11;</li>
+<li>Коррозия: медные coupons — класс G1 по ISA-71.04;</li>
+<li><strong>Отсутствие бумаги и картона</strong> в зоне размещения;</li>
+<li>ESD-защита: ANSI/ESD S20.20.</li>
+</ul>
+<h3>Oracle Exadata</h3>
+<ul>
+<li>Температура: 5–32 °C;</li>
+<li>Влажность: 10–90 % RH;</li>
+<li>Максимальная высота над уровнем моря: 3 048 м;</li>
+<li>Чистота: соответствие ISO 14644 Class 8;</li>
+<li>Фильтрация: ≥ MERV 8 на входе, ≥ MERV 11 на рециркуляции.</li>
+</ul>
+<h3>Dell EMC PowerEdge</h3>
+<ul>
+<li>Температура: 10–35 °C (класс A2);</li>
+<li>Влажность: 20–80 % RH;</li>
+<li>Максимальная точка росы: 21 °C;</li>
+<li>Частицы: ISO 14644 Class 8;</li>
+<li><strong>Рекомендуется Side-filter для агрессивных сред</strong>.</li>
+</ul>
+<h3>Таблица 4. Сводная таблица требований вендоров</h3>
+<p>|--------|------------|-----------|---------|-----|</p>
+<div class="table-wrap"><table>
+<tr><th>Вендор</th><th>Температура</th><th>Влажность</th><th>Чистота</th><th>ESD</th></tr>
+<tr><td>NVIDIA</td><td>5–30 °C</td><td>20–80 %</td><td>ISO 8, MERV 11</td><td>ANSI/ESD S20.20</td></tr>
+<tr><td>Oracle</td><td>5–32 °C</td><td>10–90 %</td><td>ISO 8, MERV 8/11</td><td>IEC 61340-5-1</td></tr>
+<tr><td>Dell EMC</td><td>10–35 °C</td><td>20–80 %</td><td>ISO 8, A2</td><td>IEC 61340-5-1</td></tr>
+<tr><td>HPE</td><td>10–35 °C</td><td>20–80 %</td><td>ISO 8, A2</td><td>ANSI/ESD S20.20</td></tr>
+<tr><td>Cisco</td><td>0–40 °C</td><td>10–85 %</td><td>ISO 8–9</td><td>IEC 61340-5-1</td></tr>
+</table></div>
+<h2>Заключение</h2>
+<p>Стандарты чистоты для ЦОД формируют многоуровневую систему требований:</p>
+<ul>
+<li><strong>ANSI/TIA-942</strong> определяет инфраструктурные требования и классификацию Tier;</li>
+<li><strong>ISO 14644-1 Class 8</strong> — базовый стандарт чистоты воздуха;</li>
+<li><strong>ASHRAE</strong> устанавливает климатические параметры и уровни загрязнения;</li>
+<li><strong>Вендоры</strong> (NVIDIA, Oracle, Dell) формулируют собственные, часто более строгие требования;</li>
+<li><strong>IEC 61340-5-1</strong> регулирует ESD-защиту при эксплуатации и уборке.</li>
+</ul>
+<p>Уборка в ЦОД — это не сервисная услуга, а <strong>критическая инфраструктурная операция</strong>. Использование неподходящего оборудования (без ESD-защиты, без HEPA-фильтрации) способно нанести больший ущерб, чем отсутствие уборки вообще.</p>
+<p>Ключевые правила:</p>
+<ol>
+<li>Только <strong>ESD-safe пылесосы</strong> с сопротивлением 10⁶–10⁹ Ом;</li>
+<li>Только <strong>HEPA H13–H14 фильтрация</strong>;</li>
+<li>Регулярная уборка <strong>подпольного пространства</strong> — не реже 1 раза в квартал;</li>
+<li><strong>Полный запрет бумаги и картона</strong> в машинном зале;</li>
+<li><strong>Документирование</strong> каждой уборки в журнале эксплуатации;</li>
+<li><strong>Периодический аудит</strong> — измерение частиц и коррозионные тесты.</li>
+</ol>
+<h2>Профессиональное оборудование для уборки ЦОД от Atrix Kazakhstan</h2>
+<p>Компания <strong>Atrix Kazakhstan</strong> — официальный дистрибьютор <strong>Atrix International (США, с 1981 года)</strong> — предлагает сертифицированное оборудование для уборки центров обработки данных всех уровней Tier.</p>
+<p><strong>Рекомендуемые модели для ЦОД:</strong></p>
+<p>|--------|-----------|------------|-----------|------|</p>
+<div class="table-wrap"><table>
+<tr><th>Модель</th><th>Фильтрация</th><th>ESD-защита</th><th>Применение</th><th>Цена</th></tr>
+<tr><td><strong>VACOMEGAS220F</strong></td><td>HEPA H14</td><td>Да, полная</td><td>Ежедневная уборка Tier 2–4</td><td>489 000 ₸</td></tr>
+<tr><td><strong>VACOMEGAUM2F</strong></td><td>ULPA H14</td><td>Нет (заземление)</td><td>Уборка подполья, глубокая очистка</td><td>882 000 ₸</td></tr>
+<tr><td><strong>VACO22VESD</strong></td><td>HEPA H14</td><td>Да, беспроводной</td><td>Мобильная уборка, труднодоступные места</td><td>887 000 ₸</td></tr>
+<tr><td><strong>VACO22VDC</strong></td><td>ULPA премиум</td><td>Да</td><td>Максимальные требования, Tier 4</td><td>957 000 ₸</td></tr>
+</table></div>
+<p>Все модели оснащены:</p>
+<ul>
+<li>Корпусом из нержавеющей стали AISI 304;</li>
+<li>Бесщёточным двигателем (искробезопасность);</li>
+<li>Системой заземления IEC 60309;</li>
+<li>ESD-safe шлангами и насадками;</li>
+<li>Сертификатами соответствия IEC 61340-5-1.</li>
+</ul>
+<p>📞 <strong>Консультация по подбору оборудования для ЦОД:</strong> +7 706 421 75 36</p>
+<p>🌐 <strong>Каталог:</strong> <a href="https://atrixkz.kz">atrixkz.kz</a></p>
+<p>*Статья подготовлена на основе стандартов ANSI/TIA-942-B, ISO 14644-1:2015, ASHRAE TC 9.9, ISA-71.04-2013, IEC 61340-5-1 и технических спецификаций Atrix International. Рекомендации вендоров приведены по открытым документам на момент публикации.*</p>
+<div class="cta-box"><h3>Нужен промышленный пылесос в Казахстане?</h3><p>Atrix Kazakhstan — единственный официальный дистрибьютор Atrix International в Центральной Азии. Бесплатная демонстрация в Алматы, доставка по всему Казахстану.</p><a href="https://wa.me/77064217536" class="btn">📱 Написать в WhatsApp</a><p style="margin-top:12px;font-size:14px">или позвоните: <strong style="color:var(--white)">+7 706 421 75 36</strong></p></div>
+</article>
+<footer class="footer"><p>© 2026 Atrix Kazakhstan. Официальный дистрибьютор Atrix International.</p><p style="margin-top:8px"><a href="/">На главную</a> · <a href="/privacy-policy.html">Политика конфиденциальности</a></p></footer>
+</body></html>
