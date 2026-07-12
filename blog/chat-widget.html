@@ -1,0 +1,559 @@
+<!--
+  Chat Widget for atrixkz.kz
+  Atrix Kazakhstan - Official Distributor
+  
+  Usage: Copy the content inside <style> and the content inside <script> 
+  into your main HTML page, or include this file via iframe/JS fetch.
+  
+  All contact links:
+  - WhatsApp: https://wa.me/77064217536
+  - Phone:    tel:+77064217536
+  - Email:    info@atrixkz.kz
+  - Site:     https://atrixkz.kz
+-->
+
+<style>
+  /* ===== Chat Widget Styles ===== */
+  #atrix-chat-widget {
+    --chat-bg: #0d1117;
+    --chat-border: #1e2530;
+    --chat-text: #e0e0e0;
+    --chat-text-muted: #8a8a8a;
+    --chat-accent: #F5A623;
+    --chat-accent-hover: #FFD700;
+    --chat-shadow: 0 8px 40px rgba(0,0,0,0.5);
+    --chat-radius: 16px;
+
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+    z-index: 99999;
+    font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  }
+
+  /* --- Toggle Button --- */
+  .chat-toggle {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #F5A623, #D4A843);
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 20px rgba(245, 166, 35, 0.35);
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    position: relative;
+    outline: none;
+  }
+
+  .chat-toggle:hover {
+    transform: scale(1.08);
+    box-shadow: 0 6px 28px rgba(245, 166, 35, 0.45);
+  }
+
+  .chat-toggle:active {
+    transform: scale(0.95);
+  }
+
+  .chat-toggle:focus-visible {
+    box-shadow: 0 0 0 3px rgba(245, 166, 35, 0.3), 0 4px 20px rgba(245, 166, 35, 0.35);
+  }
+
+  .chat-toggle svg {
+    width: 28px;
+    height: 28px;
+    color: #0a0e1a;
+    transition: transform 0.3s ease;
+  }
+
+  .chat-toggle.is-open svg {
+    transform: rotate(180deg);
+  }
+
+  /* Close icon (hidden by default) */
+  .chat-toggle .icon-close {
+    display: none;
+    position: absolute;
+  }
+
+  .chat-toggle.is-open .icon-chat {
+    display: none;
+  }
+
+  .chat-toggle.is-open .icon-close {
+    display: block;
+  }
+
+  /* Notification dot */
+  .chat-toggle-badge {
+    position: absolute;
+    top: -2px;
+    right: -2px;
+    width: 18px;
+    height: 18px;
+    background: #EF4444;
+    border-radius: 50%;
+    border: 2.5px solid #0a0e1a;
+    animation: chatPulse 2s ease-in-out infinite;
+  }
+
+  .chat-toggle.is-open .chat-toggle-badge {
+    display: none;
+  }
+
+  @keyframes chatPulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.15); }
+  }
+
+  /* --- Chat Panel --- */
+  .chat-panel {
+    position: absolute;
+    bottom: 76px;
+    right: 0;
+    width: 360px;
+    max-width: calc(100vw - 48px);
+    background: var(--chat-bg);
+    border: 1px solid var(--chat-border);
+    border-radius: var(--chat-radius);
+    box-shadow: var(--chat-shadow);
+    overflow: hidden;
+    opacity: 0;
+    transform: translateY(16px) scale(0.95);
+    pointer-events: none;
+    transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .chat-panel.is-visible {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    pointer-events: auto;
+  }
+
+  /* --- Panel Header --- */
+  .chat-header {
+    padding: 20px 20px 16px;
+    border-bottom: 1px solid var(--chat-border);
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .chat-avatar {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #F5A623, #D4A843);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    flex-shrink: 0;
+  }
+
+  .chat-header-info h3 {
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--chat-text);
+    margin: 0 0 3px;
+    line-height: 1.3;
+  }
+
+  .chat-header-info p {
+    font-size: 12px;
+    color: var(--chat-text-muted);
+    margin: 0;
+    line-height: 1.4;
+  }
+
+  .chat-status {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 12px;
+    color: #10B981;
+    margin-top: 4px;
+  }
+
+  .chat-status-dot {
+    width: 7px;
+    height: 7px;
+    background: #10B981;
+    border-radius: 50%;
+    box-shadow: 0 0 0 2px rgba(16, 185, 129, 0.2);
+    animation: chatStatusPulse 2s ease-in-out infinite;
+  }
+
+  @keyframes chatStatusPulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.5; }
+  }
+
+  /* --- Panel Body --- */
+  .chat-body {
+    padding: 20px;
+  }
+
+  .chat-greeting {
+    background: rgba(245, 166, 35, 0.06);
+    border: 1px solid rgba(245, 166, 35, 0.12);
+    border-radius: 12px;
+    padding: 16px;
+    margin-bottom: 20px;
+  }
+
+  .chat-greeting p {
+    font-size: 14px;
+    color: var(--chat-text);
+    margin: 0;
+    line-height: 1.6;
+  }
+
+  .chat-greeting strong {
+    color: var(--chat-accent);
+  }
+
+  .chat-actions-label {
+    font-size: 11px;
+    font-weight: 600;
+    color: var(--chat-text-muted);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 12px;
+  }
+
+  /* --- Action Buttons --- */
+  .chat-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .chat-action-btn {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 14px 16px;
+    border-radius: 10px;
+    background: transparent;
+    border: 1.5px solid var(--chat-border);
+    color: var(--chat-text);
+    font-size: 14px;
+    font-weight: 500;
+    font-family: inherit;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.25s ease;
+    text-align: left;
+    outline: none;
+  }
+
+  .chat-action-btn:hover {
+    border-color: var(--chat-accent);
+    background: rgba(245, 166, 35, 0.05);
+    transform: translateX(3px);
+  }
+
+  .chat-action-btn:focus-visible {
+    box-shadow: 0 0 0 2px rgba(245, 166, 35, 0.3);
+  }
+
+  .chat-action-btn .action-icon {
+    width: 36px;
+    height: 36px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    flex-shrink: 0;
+  }
+
+  .chat-action-btn .action-text {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+  }
+
+  .chat-action-btn .action-title {
+    font-size: 14px;
+    font-weight: 600;
+  }
+
+  .chat-action-btn .action-desc {
+    font-size: 12px;
+    color: var(--chat-text-muted);
+    font-weight: 400;
+  }
+
+  .chat-action-btn .action-arrow {
+    margin-left: auto;
+    color: var(--chat-text-muted);
+    transition: color 0.25s, transform 0.25s;
+    flex-shrink: 0;
+  }
+
+  .chat-action-btn:hover .action-arrow {
+    color: var(--chat-accent);
+    transform: translateX(2px);
+  }
+
+  /* Icon backgrounds */
+  .action-icon-demo    { background: rgba(245, 166, 35, 0.1); }
+  .action-icon-kp      { background: rgba(59, 130, 246, 0.1); }
+  .action-icon-whatsapp{ background: rgba(37, 211, 102, 0.1); }
+  .action-icon-phone   { background: rgba(16, 185, 129, 0.1); }
+
+  /* --- Panel Footer --- */
+  .chat-footer {
+    padding: 12px 20px;
+    border-top: 1px solid var(--chat-border);
+    text-align: center;
+  }
+
+  .chat-footer a {
+    font-size: 12px;
+    color: var(--chat-text-muted);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+
+  .chat-footer a:hover {
+    color: var(--chat-accent);
+  }
+
+  /* --- Responsive --- */
+  @media (max-width: 480px) {
+    #atrix-chat-widget {
+      bottom: 16px;
+      right: 16px;
+    }
+
+    .chat-panel {
+      width: calc(100vw - 32px);
+      max-width: none;
+      right: 0;
+      bottom: 72px;
+    }
+
+    .chat-toggle {
+      width: 54px;
+      height: 54px;
+    }
+
+    .chat-toggle svg {
+      width: 24px;
+      height: 24px;
+    }
+  }
+</style>
+
+<script>
+  (function () {
+    'use strict';
+
+    // ===== Configuration =====
+    var CHAT_CONFIG = {
+      greetingText: 'Здравствуйте! Чем можем помочь?',
+      companyName: 'Atrix Kazakhstan',
+      companySubtitle: 'Официальный дистрибьютор',
+      actions: [
+        {
+          id: 'demo',
+          title: 'Запросить демо',
+          description: 'Бесплатная демонстрация оборудования',
+          icon: '&#127919;',
+          iconClass: 'action-icon-demo',
+          href: 'https://wa.me/77064217536?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%B7%D0%B0%D0%BF%D1%80%D0%BE%D1%81%D0%B8%D1%82%D1%8C%20%D0%B4%D0%B5%D0%BC%D0%BE%D0%BD%D1%81%D1%82%D1%80%D0%B0%D1%86%D0%B8%D1%8E%20%D0%BF%D1%8B%D0%BB%D0%B5%D1%81%D0%BE%D1%81%D0%B0%20Atrix.',
+          target: '_blank',
+        },
+        {
+          id: 'kp',
+          title: 'Получить КП',
+          description: 'Коммерческое предложение на email',
+          icon: '&#128221;',
+          iconClass: 'action-icon-kp',
+          href: 'https://wa.me/77064217536?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20%D0%9F%D1%80%D0%BE%D1%88%D1%83%20%D0%B2%D1%8B%D1%81%D0%BB%D0%B0%D1%82%D1%8C%20%D0%9A%D0%9F%20%D0%BD%D0%B0%20%D0%BF%D1%8B%D0%BB%D0%B5%D1%81%D0%BE%D1%81%20Atrix.',
+          target: '_blank',
+        },
+        {
+          id: 'whatsapp',
+          title: 'Написать в WhatsApp',
+          description: 'Ответим за несколько минут',
+          icon: '&#128172;',
+          iconClass: 'action-icon-whatsapp',
+          href: 'https://wa.me/77064217536',
+          target: '_blank',
+        },
+        {
+          id: 'phone',
+          title: 'Позвонить',
+          description: '+7 706 421 75 36',
+          icon: '&#128222;',
+          iconClass: 'action-icon-phone',
+          href: 'tel:+77064217536',
+          target: null,
+        },
+      ],
+      storageKey: 'atrix_chat_widget_opened',
+    };
+
+    // ===== Track first open =====
+    function markOpened() {
+      try {
+        localStorage.setItem(CHAT_CONFIG.storageKey, 'true');
+      } catch (e) {}
+    }
+
+    function wasOpened() {
+      try {
+        return localStorage.getItem(CHAT_CONFIG.storageKey) === 'true';
+      } catch (e) {
+        return true; // hide badge if unknown
+      }
+    }
+
+    // ===== Build Widget =====
+    function buildWidget() {
+      var hasBeenOpened = wasOpened();
+
+      var widget = document.createElement('div');
+      widget.id = 'atrix-chat-widget';
+
+      // Toggle button
+      var toggleBtn = document.createElement('button');
+      toggleBtn.className = 'chat-toggle';
+      toggleBtn.setAttribute('aria-label', 'Открыть чат');
+      toggleBtn.setAttribute('aria-expanded', 'false');
+      toggleBtn.innerHTML =
+        '<span class="icon-chat"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></span>' +
+        '<span class="icon-close"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></span>' +
+        (hasBeenOpened ? '' : '<span class="chat-toggle-badge"></span>');
+
+      // Chat panel
+      var panel = document.createElement('div');
+      panel.className = 'chat-panel';
+
+      // Build actions HTML
+      var actionsHtml = '';
+      for (var i = 0; i < CHAT_CONFIG.actions.length; i++) {
+        var a = CHAT_CONFIG.actions[i];
+        var targetAttr = a.target ? ' target="' + a.target + '" rel="noopener noreferrer"' : '';
+        actionsHtml +=
+          '<a href="' + a.href + '" class="chat-action-btn" data-action="' + a.id + '"' + targetAttr + '>' +
+            '<span class="action-icon ' + a.iconClass + '">' + a.icon + '</span>' +
+            '<span class="action-text">' +
+              '<span class="action-title">' + a.title + '</span>' +
+              '<span class="action-desc">' + a.description + '</span>' +
+            '</span>' +
+            '<span class="action-arrow"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg></span>' +
+          '</a>';
+      }
+
+      panel.innerHTML =
+        '<div class="chat-header">' +
+          '<div class="chat-avatar">&#128104;&#8205;&#128187;</div>' +
+          '<div class="chat-header-info">' +
+            '<h3>' + CHAT_CONFIG.companyName + '</h3>' +
+            '<p>' + CHAT_CONFIG.companySubtitle + '</p>' +
+            '<span class="chat-status"><span class="chat-status-dot"></span>Онлайн</span>' +
+          '</div>' +
+        '</div>' +
+        '<div class="chat-body">' +
+          '<div class="chat-greeting"><p>' + CHAT_CONFIG.greetingText + '</p></div>' +
+          '<p class="chat-actions-label">Быстрые действия</p>' +
+          '<div class="chat-actions">' + actionsHtml + '</div>' +
+        '</div>' +
+        '<div class="chat-footer">' +
+          '<a href="https://atrixkz.kz">atrixkz.kz</a>' +
+        '</div>';
+
+      widget.appendChild(toggleBtn);
+      widget.appendChild(panel);
+      document.body.appendChild(widget);
+
+      // ===== Toggle Logic =====
+      var isOpen = false;
+
+      function openChat() {
+        isOpen = true;
+        toggleBtn.classList.add('is-open');
+        toggleBtn.setAttribute('aria-expanded', 'true');
+        toggleBtn.setAttribute('aria-label', 'Закрыть чат');
+        panel.classList.add('is-visible');
+        markOpened();
+      }
+
+      function closeChat() {
+        isOpen = false;
+        toggleBtn.classList.remove('is-open');
+        toggleBtn.setAttribute('aria-expanded', 'false');
+        toggleBtn.setAttribute('aria-label', 'Открыть чат');
+        panel.classList.remove('is-visible');
+      }
+
+      toggleBtn.addEventListener('click', function () {
+        if (isOpen) {
+          closeChat();
+        } else {
+          openChat();
+        }
+      });
+
+      // Close on Escape key
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape' && isOpen) {
+          closeChat();
+        }
+      });
+
+      // Close on clicking outside
+      document.addEventListener('click', function (e) {
+        if (isOpen && !widget.contains(e.target)) {
+          closeChat();
+        }
+      });
+
+      // Auto-open after delay (first visit only)
+      if (!hasBeenOpened) {
+        setTimeout(function () {
+          if (!isOpen) {
+            openChat();
+          }
+        }, 8000);
+      }
+    }
+
+    // ===== Initialize =====
+    function init() {
+      if (typeof document === 'undefined') return;
+      if (document.getElementById('atrix-chat-widget')) return;
+
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', buildWidget);
+      } else {
+        buildWidget();
+      }
+    }
+
+    // Public API
+    window.AtrixChatWidget = {
+      init: init,
+      open: function () {
+        var toggle = document.querySelector('#atrix-chat-widget .chat-toggle');
+        if (toggle) toggle.click();
+      },
+      close: function () {
+        var panel = document.querySelector('#atrix-chat-widget .chat-panel');
+        if (panel && panel.classList.contains('is-visible')) {
+          var toggle = document.querySelector('#atrix-chat-widget .chat-toggle');
+          if (toggle) toggle.click();
+        }
+      },
+    };
+
+    init();
+  })();
+</script>
