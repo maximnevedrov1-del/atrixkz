@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Стандарт IEC 61340-5-1: требования к уборке дата-центров и серверных — Atrix KZ</title>
+<meta name="description" content="">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://atrixkz.kz/blog/article-2.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Стандарт IEC 61340-5-1: требования к уборке дата-центров и серверных — Atrix KZ">
+<meta property="og:description" content="">
+<meta property="og:url" content="https://atrixkz.kz/blog/article-2.html">
+<meta property="og:site_name" content="Atrix KZ">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#030508;--bg-elevated:#0a0f1a;--bg-card:#111827;--border:#1f2937;--gold:#e8b94a;--gold-hover:#d4a843;--white:#f9fafb;--muted:#9ca3af;--blue:#3b82f6;--green:#10b981;--radius:16px}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',system-ui,-apple-system,sans-serif;background:var(--bg);color:var(--white);line-height:1.7;font-size:16px;-webkit-font-smoothing:antialiased}
+img{max-width:100%;height:auto}
+a{color:var(--gold);text-decoration:none;transition:opacity .2s}
+a:hover{opacity:.8}
+
+/* Nav */
+.nav{position:fixed;top:0;left:0;right:0;z-index:1000;padding:0 48px;height:72px;display:flex;align-items:center;justify-content:space-between;background:linear-gradient(180deg,rgba(3,5,8,.9) 0%,rgba(3,5,8,0) 100%);backdrop-filter:blur(20px);border-bottom:1px solid rgba(255,255,255,.04)}
+.nav-logo{font-size:22px;font-weight:900;letter-spacing:-.5px;color:var(--white)}
+.nav-logo span{color:var(--gold)}
+.nav-links{display:flex;align-items:center;gap:36px;list-style:none}
+.nav-links a{color:var(--muted);font-size:14px;font-weight:500;letter-spacing:.02em;text-transform:uppercase;transition:color .2s}
+.nav-links a:hover{color:var(--white)}
+.nav-cta{background:var(--gold);color:#000!important;padding:10px 24px;border-radius:100px;font-size:13px!important;font-weight:700!important;letter-spacing:.05em!important;text-transform:uppercase!important}
+.burger{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:5px}
+.burger span{width:24px;height:2px;background:var(--white);border-radius:2px}
+
+/* Article */
+.article{max-width:800px;margin:0 auto;padding:120px 48px 80px}
+.article h1{font-size:clamp(28px,4vw,42px);font-weight:800;line-height:1.15;letter-spacing:-.02em;margin-bottom:20px;color:var(--white)}
+.article .meta{color:var(--muted);font-size:14px;margin-bottom:40px;padding-bottom:24px;border-bottom:1px solid var(--border)}
+.article h2{font-size:clamp(22px,3vw,28px);font-weight:700;margin:48px 0 16px;color:var(--white);letter-spacing:-.01em}
+.article h3{font-size:20px;font-weight:600;margin:32px 0 12px;color:var(--white)}
+.article p{margin-bottom:16px;color:var(--muted);font-size:16px;line-height:1.8}
+.article p strong{color:var(--white)}
+.article ul,.article ol{margin:16px 0 24px 24px;color:var(--muted);line-height:1.8}
+.article li{margin-bottom:8px}
+.article li strong{color:var(--white)}
+.article blockquote{border-left:3px solid var(--gold);padding:16px 24px;margin:24px 0;background:var(--bg-card);border-radius:0 var(--radius-sm) var(--radius-sm) 0}
+.article blockquote p{color:var(--white);margin-bottom:8px}
+.article blockquote p:last-child{margin-bottom:0}
+
+/* Tables */
+.table-wrap{overflow-x:auto;margin:24px 0}
+.article table{width:100%;border-collapse:collapse;font-size:15px}
+.article th{padding:14px 18px;text-align:left;font-weight:600;color:var(--gold);border-bottom:2px solid var(--border);font-size:13px;letter-spacing:.05em;text-transform:uppercase;background:var(--bg-card)}
+.article td{padding:12px 18px;border-bottom:1px solid var(--border);color:var(--muted)}
+.article td strong{color:var(--white)}
+.article tr:hover td{background:rgba(255,255,255,.02)}
+
+/* CTA */
+.cta-box{background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius);padding:32px;margin:48px 0;text-align:center}
+.cta-box h3{font-size:22px;font-weight:700;margin-bottom:12px;color:var(--gold)}
+.cta-box p{font-size:16px;margin-bottom:20px}
+.btn{display:inline-block;background:var(--gold);color:#000;padding:14px 32px;border-radius:100px;font-weight:700;font-size:15px;transition:all .3s}
+.btn:hover{background:var(--gold-hover);transform:translateY(-2px)}
+
+/* Footer */
+.footer{padding:40px 48px;background:var(--bg);border-top:1px solid var(--border);text-align:center;color:var(--muted);font-size:14px}
+
+/* Scrollbar */
+::-webkit-scrollbar{width:8px}
+::-webkit-scrollbar-track{background:var(--bg)}
+::-webkit-scrollbar-thumb{background:var(--border);border-radius:4px}
+
+/* Mobile */
+@media(max-width:768px){
+.nav{padding:0 20px;height:60px}
+.nav-links{display:none}
+.burger{display:flex}
+.nav-cta{display:none}
+.article{padding:80px 20px 40px}
+.article h1{font-size:26px}
+.article h2{font-size:22px}
+}
+</style>
+
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Стандарт IEC 61340-5-1: требования к уборке дата-центров и серверных","description":"","url":"https://atrixkz.kz/blog/article-2.html","datePublished":"2026-07-09","author":{"@type":"Organization","name":"Atrix Kazakhstan"},"publisher":{"@type":"Organization","name":"Atrix KZ","logo":{"@type":"ImageObject","url":"https://atrixkz.kz/img/atrix-logo.png"}}}</script>
+</head>
+
+<body>
+<nav class="nav">
+  <a href="/" class="nav-logo">ATRIX<span style="color:var(--gold)">KZ</span></a>
+  <ul class="nav-links">
+    <li><a href="/sravnenie-modelei-atrix.html">Продукты</a></li>
+    <li><a href="/blog/">Блог</a></li>
+    <li><a href="/contacts.html">Контакты</a></li>
+  </ul>
+  <a href="/kp-form.html" class="nav-cta">Получить КП</a>
+  <button class="burger" aria-label="Меню"><span></span><span></span><span></span></button>
+</nav>
+
+<article class="article">
+<h1>Стандарт IEC 61340-5-1: требования к уборке дата-центров и серверных</h1>
+
+<h2>Что такое IEC 61340-5-1</h2>
+<p><strong>IEC 61340-5-1</strong> — международный стандарт Международной электротехнической комиссии, регламентирующий требования к программам защиты от электростатических разрядов (ESD — ElectroStatic Discharge). Полное название: *"Electrostatics — Part 5-1: Protection of electronic devices from electrostatic phenomena — General requirements"*.</p>
+<p>Стандарт входит в серию IEC 61340 и является обязательной ссылочной базой для:</p>
+<ul>
+<li>Сертификации ISO 9001 в электронной промышленности</li>
+<li>Аудитов дата-центров по стандарту ANSI/TIA-942</li>
+<li>Требований PCI DSS для обработки платёжных данных</li>
+<li>Внутренних аудитов Tier III и Tier IV ЦОД</li>
+</ul>
+<blockquote>
+<p><strong>IEC 61340-5-1 обновлён в 2023 году</strong> — актуальная редакция включает дополнительные требования к уборочному оборудованию в зонах с ESDS-изделиями (electrostatic discharge sensitive devices).</p>
+</blockquote>
+<h2>Область применения стандарта в дата-центрах</h2>
+<p>Стандарт распространяется на все зоны ЦОД, где выполняется:</p>
+<ul>
+<li>Установка и замена серверного оборудования</li>
+<li>Техническое обслуживание и диагностика</li>
+<li>Уборка и поддержание чистоты</li>
+<li>Хранение запасных компонентов</li>
+<li>Работа с открытыми платами и модулями памяти</li>
+</ul>
+<h3>Риск-зоны ЦОД по ESD-воздействию</h3>
+<div class="table-wrap"><table>
+<tr><th>Зона</th><th>Уровень риска</th><th>Типичные операции</th></tr>
+<tr><td>Серверный зал</td><td><strong>Критический</strong></td><td>Замена RAM, чистка от пыли</td></tr>
+<tr><td>Коммутационная</td><td><strong>Высокий</strong></td><td>Подключение кабелей, патч-панели</td></tr>
+<tr><td>Зона хранения</td><td><strong>Высокий</strong></td><td>Хранение SSD, сетевых карт</td></tr>
+<tr><td>Зона разгрузки</td><td><strong>Средний</strong></td><td>Приём поставок оборудования</td></tr>
+<tr><td>NOC / диспетчерская</td><td><strong>Низкий</strong></td><td>Мониторинг, без прямого контакта</td></tr>
+</table></div>
+<h2>Ключевые требования IEC 61340-5-1 к уборочному оборудованию</h2>
+<h3>Раздел 5.2 — Требования к материалам</h3>
+<p>Все материалы, контактирующие с ESDS-изделиями или находящиеся в их непосредственной близости, должны:</p>
+<ul>
+<li>Иметь удельное поверхностное сопротивление в диапазоне <strong>10^6 – 10^9 Ом/кв</strong></li>
+<li>Не генерировать заряд выше <strong>100 В</strong> при типовых условиях эксплуатации</li>
+<li>Обеспечивать рассеяние заряда за время не более <strong>2 секунд</strong></li>
+</ul>
+<h3>Раздел 5.3 — Заземление оборудования</h3>
+<p>Уборочное оборудование обязано иметь:</p>
+<ol>
+<li><strong>Цепь защитного заземления</strong> (protective earthing) через шнур питания</li>
+<li><strong>Соединение эквипотенциальности</strong> всех металлических частей</li>
+<li><strong>Сопротивление заземления</strong> не более 1,0 Ом</li>
+<li><strong>Неразрывность цепи заземления</strong> — проверяется при каждом ТО</li>
+</ol>
+<h3>Раздел 5.4 — Верификация и документирование</h3>
+<p>Стандарт требует:</p>
+<ul>
+<li>Проведение ESD-аудита <strong>минимум 1 раз в 12 месяцев</strong></li>
+<li>Ведение журнала проверок с результатами измерений</li>
+<li>Хранение сертификатов на всё ESD-оборудование</li>
+<li>Обучение персонала по программе ESD-awareness с ежегодным подтверждением квалификации</li>
+</ul>
+<h2>Что проверяет аудитор при ESD-аудите дата-центра</h2>
+<h3>Проверка документации</h3>
+<p>Аудитор запрашивает и проверяет:</p>
+<ol>
+<li><strong>Реестр ESD-оборудования</strong> — перечень всего оборудования с указанием сертификатов</li>
+<li><strong>Сертификаты соответствия</strong> IEC 61340-5-1 (не декларации производителя!)</li>
+<li><strong>Протоколы входного контроля</strong> — проверка при поступлении</li>
+<li><strong>График планового ТО</strong> и журнал выполненных работ</li>
+<li><strong>Программу обучения</strong> персонала с реестром сертификатов</li>
+</ol>
+<h3>Инструментальные проверки</h3>
+<div class="table-wrap"><table>
+<tr><th>Параметр</th><th>Метод проверки</th><th>Допустимое значение</th></tr>
+<tr><td>Поверхностное сопротивление</td><td>Мегаомметр</td><td>10^6 – 10^9 Ом/кв</td></tr>
+<tr><td>Цепь заземления</td><td>Мультиметр</td><td>< 1,0 Ом</td></tr>
+<tr><td>Электростатический потенциал</td><td>Электростатический вольтметр</td><td>< 100 В</td></tr>
+<tr><td>Рассеяние заряда</td><td>Field meter + decay plate</td><td>< 2 секунд</td></tr>
+</table></div>
+<h3>Типовые замечания аудиторов</h3>
+<ul>
+<li>Отсутствие сертификата на пылесос — <strong>критическое несоответствие</strong></li>
+<li>Использование бытового пылесоса — <strong>критическое несоответствие</strong></li>
+<li>Просроченный сертификат — <strong>несоответствие</strong></li>
+<li>Отсутствие журнала проверок — <strong>замечание</strong></li>
+</ul>
+<blockquote>
+<p><strong>Статистика:</strong> по данным аудиторских компаний, 60–70% ЦОД в СНГ получают замечания по ESD-оборудованию при первом аудите.</p>
+</blockquote>
+<h2>Последствия нарушения IEC 61340-5-1</h2>
+<h3>Юридические последствия</h3>
+<ul>
+<li><strong>Потеря сертификации ISO 9001</strong> — при систематических нарушениях</li>
+<li><strong>Невозможность прохождения аудита TIA-942</strong> — для Tier III и Tier IV</li>
+<li><strong>Нарушение PCI DSS</strong> — штрафы от платёжных систем</li>
+<li><strong>Срыв контрактов</strong> — клиенты требуют подтверждённую сертификацию</li>
+</ul>
+<h3>Финансовые последствия</h3>
+<div class="table-wrap"><table>
+<tr><th>Вид последствия</th><th>Оценка ущерба</th></tr>
+<tr><td>Прямой ущерб от ESD-инцидента</td><td>2 000 000 – 10 000 000 тг</td></tr>
+<tr><td>Потеря клиентов из-за простоя</td><td>5 000 000 – 50 000 000 тг</td></tr>
+<tr><td>Штрафы за нарушение SLA</td><td>до 100% месячной выручки</td></tr>
+<tr><td>Повторный аудит</td><td>1 500 000 – 3 000 000 тг</td></tr>
+<tr><td>Репутационные потери</td><td>Не поддаются оценке</td></tr>
+</table></div>
+<h3>Реальные кейсы</h3>
+<p><strong>Кейс 1.</strong> ЦОД в Нур-Султане (2022) — использование неcертифицированного пылесоса при плановой уборке. Результат: выход из строя 6 модулей RAM на сервере хранения. Ущерб: 1 200 000 тг на замену + 8 часов простоя.</p>
+<p><strong>Кейс 2.</strong> Телеком-оператор в Алматы (2023) — замечание аудитора по ESD-оборудованию. Результат: приостановка сертификации на 3 месяца, потеря крупного контракта.</p>
+<h2>Как выбрать сертифицированный ESD-пылесос в Казахстане</h2>
+<h3>Алгоритм выбора</h3>
+<p><strong>Шаг 1. Проверка сертификатов</strong></p>
+<p>Запросите у поставщика:</p>
+<ul>
+<li>Сертификат соответствия IEC 61340-5-1</li>
+<li>Протокол испытаний TÜV Rheinland</li>
+<li>Декларацию CE</li>
+<li>Русскоязычную версию документации</li>
+</ul>
+<p><strong>Шаг 2. Проверка соответствия Казахстанскому законодательству</strong></p>
+<ul>
+<li>ТР ТС 004/2011 (безопасность низковольтного оборудования)</li>
+<li>ТР ТС 020/2011 (электромагнитная совместимость)</li>
+<li>Наличие сертификата соответствия ЕАЭС</li>
+</ul>
+<p><strong>Шаг 3. Проверка поставщика</strong></p>
+<ul>
+<li>Официальный дистрибьютор или перекупщик?</li>
+<li>Возможность сервисного обслуживания в Казахстане</li>
+<li>Наличие запасных частей и расходников</li>
+<li>Гарантийные обязательства</li>
+</ul>
+<h3>Чек-лист вопросов поставщику</h3>
+<ul>
+<li>[ ] Есть ли сертификат IEC 61340-5-1?</li>
+<li>[ ] Кто выдал сертификат и когда?</li>
+<li>[ ] Есть ли протокол измерения электростатического потенциала?</li>
+<li>[ ] Можно ли провести демонстрацию на нашем объекте?</li>
+<li>[ ] Какие сроки поставки фильтров и расходников?</li>
+<li>[ ] Где находится сервисный центр?</li>
+</ul>
+<h2>Atrix VACOMEGAS220F — единственный с сертификатом IEC 61340 в Казахстане</h2>
+<p>Atrix International (США) — производитель с 40-летней историей, специализирующийся исключительно на ESD-сертифицированном оборудовании. Модель VACOMEGAS220F — это единственное в Казахстане уборочное оборудование с полным пакетом международных сертификатов.</p>
+<h3>Пакет сертификации VACOMEGAS220F</h3>
+<div class="table-wrap"><table>
+<tr><th>Сертификат</th><th>Выдан</th><th>Срок действия</th></tr>
+<tr><td>IEC 61340-5-1</td><td>TÜV Rheinland</td><td>3 года</td></tr>
+<tr><td>CE (Low Voltage Directive)</td><td>TÜV Rheinland</td><td>Бессрочно</td></tr>
+<tr><td>EN 1822 (HEPA)</td><td>Независимая лаборатория</td><td>3 года</td></tr>
+<tr><td>ТР ТС 004/2011</td><td>Аккредитованный орган РК</td><td>5 лет</td></tr>
+</table></div>
+<h3>Технические характеристики</h3>
+<div class="table-wrap"><table>
+<tr><th>Параметр</th><th>Значение</th></tr>
+<tr><td>Модель</td><td>Atrix VACOMEGAS220F</td></tr>
+<tr><td>Цена</td><td><strong>489 000 тг</strong></td></tr>
+<tr><td>Стандарт ESD</td><td>IEC 61340-5-1</td></tr>
+<tr><td>HEPA-фильтр</td><td>H13 (99,97% при 0,3 мкм)</td></tr>
+<tr><td>Мощность всасывания</td><td>220 AW</td></tr>
+<tr><td>Уровень шума</td><td>62 дБ</td></tr>
+<tr><td>Ёмкость контейнера</td><td>15 л</td></tr>
+<tr><td>Вес</td><td>8,2 кг</td></tr>
+</table></div>
+<h3>Почему "единственный"</h3>
+<p>На рынке Казахстана представлены три категории предложений:</p>
+<ol>
+<li><strong>Промышленные пылесосы без ESD</strong> — Karcher, Nilfisk и др. Качественное оборудование, но без ESD-сертификации. Риск ESD-инцидента сохраняется.</li>
+<li><strong>ESD-оборудование без сертификата</strong> — товары с маркировкой "антистатик" или "ESD-safe" без подтверждения от аккредитованного органа. Не проходят аудит.</li>
+<li><strong>Atrix VACOMEGAS220F</strong> — единственный пылесос с сертификатом IEC 61340-5-1 от TÜV Rheinland, принимаемым всеми аудиторами.</li>
+</ol>
+<h3>Линейка Atrix для разных задач ЦОД</h3>
+<div class="table-wrap"><table>
+<tr><th>Модель</th><th>Цена</th><th>Применение</th></tr>
+<tr><td>[VACOMEGAS220F](../../products/vacomegas220f)</td><td>489 000 тг</td><td>Стандартная уборка, соответствие IEC 61340</td></tr>
+<tr><td>[VACOMEGAUM2F](../../products/vacomegaum2f)</td><td>882 000 тг</td><td>Максимальная фильтрация ULPA H14, фарма/медицина</td></tr>
+<tr><td>[VACO22VESD](../../products/vaco22vesd)</td><td>887 000 тг</td><td>Беспроводная уборка, ESD, мобильность</td></tr>
+<tr><td>[VACO22VDC](../../products/vaco22vdc)</td><td>957 000 тг</td><td>ULPA, тяжёлые условия, круглосуточная эксплуатация</td></tr>
+</table></div>
+<h2>Подготовка к ESD-аудиту: пошаговый план</h2>
+<h3>За 30 дней до аудита</h3>
+<ul>
+<li>[ ] Провести инвентаризацию всего ESD-оборудования</li>
+<li>[ ] Проверить сроки действия всех сертификатов</li>
+<li>[ ] Заказать замену просроченных сертификатов</li>
+<li>[ ] Провести внутренний аудит по чек-листу IEC 61340-5-1</li>
+</ul>
+<h3>За 14 дней до аудита</h3>
+<ul>
+<li>[ ] Провести инструментальные измерения</li>
+<li>[ ] Обновить журнал проверок</li>
+<li>[ ] Провести инструктаж персонала</li>
+<li>[ ] Подготовить пакет документов</li>
+</ul>
+<h3>За 7 дней до аудита</h3>
+<ul>
+<li>[ ] Проверить чистоту и порядок в ESD-зонах</li>
+<li>[ ] Убедиться в работоспособности всех средств защиты</li>
+<li>[ ] Назначить ответственного за сопровождение аудитора</li>
+</ul>
+<h2>Заключение</h2>
+<p>Стандарт IEC 61340-5-1 — это не формальность, а практический инструмент защиты многомиллионных инвестиций в серверное оборудование. Соблюдение стандарта:</p>
+<ul>
+<li>Снижает риск ESD-инцидента на **95%+</li>
+<li>Обеспечивает успешное прохождение аудитов TIA-942 и ISO 9001</li>
+<li>Защищает репутацию компании</li>
+<li>Сокращает операционные расходы на замену оборудования</li>
+</ul>
+<p>Выбор сертифицированного ESD-пылесоса — ключевой элемент программы ESD-защиты. Atrix VACOMEGAS220F — единственное решение в Казахстане, подтверждённое сертификатом TÜV Rheinland.</p>
+<blockquote>
+<p><strong>Единственный ESD-сертифицированный пылесос в Казахстане — Atrix VACOMEGAS220F. Цена: 489 000 тг. Бесплатная демонстрация в Алматы. Звоните +7 706 421 75 36 или пишите в WhatsApp.</strong></p>
+</blockquote>
+<p>*Atrix International — с 1981 года защищаем критическую инфраструктуру. Официальный дистрибьютор в Казахстане: atrixkz.kz*</p>
+
+<div class="cta-box">
+  <h3>Нужен ESD-пылесос в Казахстане?</h3>
+  <p>Atrix Kazakhstan — единственный официальный дистрибьютор Atrix International в Центральной Азии. Бесплатная демонстрация в Алматы, доставка по всему Казахстану.</p>
+  <a href="https://wa.me/77064217536" class="btn">📱 Написать в WhatsApp</a>
+  <p style="margin-top:12px;font-size:14px">или позвоните: <strong style="color:var(--white)">+7 706 421 75 36</strong></p>
+</div>
+</article>
+
+<footer class="footer">
+  <p>© 2026 Atrix Kazakhstan. Официальный дистрибьютор Atrix International.</p>
+  <p style="margin-top:8px"><a href="/">На главную</a> · <a href="/privacy-policy.html">Политика конфиденциальности</a></p>
+</footer>
+
+</body>
+</html>
