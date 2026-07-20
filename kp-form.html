@@ -136,6 +136,29 @@
             background: #FFD700;
             transform: translateY(-2px);
         }
+        .btn-submit:disabled {
+            opacity: 0.6;
+            cursor: wait;
+            transform: none;
+        }
+        .form-status {
+            display: none;
+            margin-top: 16px;
+            padding: 14px 18px;
+            border-radius: 10px;
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+        .form-status.error {
+            display: block;
+            background: rgba(239, 83, 80, 0.1);
+            border: 1px solid rgba(239, 83, 80, 0.4);
+            color: #ef9a9a;
+        }
+        .form-status.error a {
+            color: #25D366;
+            font-weight: 600;
+        }
         .contact-alternative {
             background: #0d1117;
             border: 1px solid #1a2332;
@@ -205,7 +228,7 @@
         </div>
 
         <div class="form-wrapper">
-            <form method="POST" action="#" id="kpForm">
+            <form id="kpForm" novalidate>
                 <div class="form-grid">
                     <div class="form-group">
                         <label for="name">Имя <span class="required">*</span></label>
@@ -227,14 +250,14 @@
                         <label for="industry">Отрасль</label>
                         <select id="industry" name="industry">
                             <option value="" disabled selected>Выберите отрасль</option>
-                            <option value="it">IT / ЦОД</option>
-                            <option value="medicine">Медицина</option>
-                            <option value="oilgas">Нефтегаз</option>
-                            <option value="hotels">Гостиницы</option>
-                            <option value="telecom">Телеком</option>
-                            <option value="banks">Банки</option>
-                            <option value="manufacturing">Производство</option>
-                            <option value="other">Другое</option>
+                            <option value="IT / ЦОД">IT / ЦОД</option>
+                            <option value="Медицина">Медицина</option>
+                            <option value="Нефтегаз">Нефтегаз</option>
+                            <option value="Гостиницы">Гостиницы</option>
+                            <option value="Телеком">Телеком</option>
+                            <option value="Банки">Банки</option>
+                            <option value="Производство">Производство</option>
+                            <option value="Другое">Другое</option>
                         </select>
                     </div>
                     <div class="form-group">
@@ -245,7 +268,7 @@
                             <option value="VACOMEGAUM2F">VACOMEGAUM2F — ULPA H14, медицина</option>
                             <option value="VACO22VESD">VACO22VESD — беспроводной ESD, 22V</option>
                             <option value="VACO22VDC">VACO22VDC — беспроводной ULPA, 22V</option>
-                            <option value="consult">Нужна консультация</option>
+                            <option value="Нужна консультация">Нужна консультация</option>
                         </select>
                     </div>
                     <div class="form-group">
@@ -264,6 +287,7 @@
                     </div>
                     <div class="form-group full-width">
                         <button type="submit" class="btn-submit">Отправить запрос</button>
+                        <div class="form-status" id="formStatus"></div>
                     </div>
                 </div>
             </form>
@@ -294,5 +318,68 @@
             <p>&copy; 2025 Atrix Kazakhstan. Все права защищены.</p>
         </div>
     </div>
+
+    <script>
+    (function () {
+        var form = document.getElementById('kpForm');
+        var statusEl = document.getElementById('formStatus');
+        if (!form) return;
+
+        form.addEventListener('submit', function (e) {
+            e.preventDefault();
+
+            if (!form.checkValidity()) {
+                form.reportValidity();
+                return;
+            }
+
+            var btn = form.querySelector('.btn-submit');
+            btn.disabled = true;
+            btn.textContent = 'Отправка...';
+            statusEl.className = 'form-status';
+            statusEl.innerHTML = '';
+
+            var data = {
+                _subject: 'Новая заявка на КП — atrixkz.kz',
+                _template: 'table',
+                _captcha: 'false'
+            };
+            var waLines = ['Заявка на КП с сайта atrixkz.kz'];
+            var labels = {
+                name: 'Имя', company: 'Компания', email: 'Email', phone: 'Телефон',
+                industry: 'Отрасль', model: 'Модель', quantity: 'Количество', comment: 'Комментарий'
+            };
+            Array.prototype.forEach.call(form.elements, function (el) {
+                if (!el.name || el.type === 'checkbox' || el.type === 'submit') return;
+                if (el.value) {
+                    data[el.name] = el.value;
+                    waLines.push((labels[el.name] || el.name) + ': ' + el.value);
+                }
+            });
+
+            fetch('https://formsubmit.co/ajax/info@atrixkz.kz', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+                body: JSON.stringify(data)
+            })
+            .then(function (r) {
+                if (!r.ok) throw new Error('send failed');
+                return r.json();
+            })
+            .then(function () {
+                window.location.href = '/thank-you.html';
+            })
+            .catch(function () {
+                var waUrl = 'https://wa.me/77064217536?text=' + encodeURIComponent(waLines.join('\n'));
+                statusEl.className = 'form-status error';
+                statusEl.innerHTML = 'Не удалось отправить автоматически. ' +
+                    '<a href="' + waUrl + '" target="_blank" rel="noopener">Отправить заявку в WhatsApp</a> ' +
+                    'или позвоните: <a href="tel:+77064217536" style="color:#F5A623">+7 706 421 75 36</a>';
+                btn.disabled = false;
+                btn.textContent = 'Отправить запрос';
+            });
+        });
+    })();
+    </script>
 </body>
 </html>

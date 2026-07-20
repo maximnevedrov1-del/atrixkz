@@ -84,6 +84,7 @@
         .btn { display: inline-flex; align-items: center; gap: 10px; padding: 16px 32px; border-radius: 10px; font-weight: 600; font-size: 0.95rem; transition: all 0.25s; border: none; cursor: pointer; }
         .btn-primary { background: linear-gradient(135deg, #F5A623, #D4A843); color: #0a0e1a; }
         .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(245, 166, 35, 0.3); text-decoration: none; }
+        .btn-primary:disabled { opacity: 0.6; cursor: wait; transform: none; box-shadow: none; }
         .btn-outline { background: transparent; color: #F5A623; border: 2px solid #F5A623; }
         .btn-outline:hover { background: rgba(245, 166, 35, 0.1); text-decoration: none; }
         .btn-whatsapp { background: #25D366; color: #fff; }
@@ -119,6 +120,22 @@
         .form-group input:focus, .form-group textarea:focus { outline: none; border-color: #F5A623; }
         .form-group input::placeholder, .form-group textarea::placeholder { color: #5a5a5a; }
         .form-group textarea { min-height: 140px; resize: vertical; }
+        .form-status {
+            display: none;
+            margin-top: 16px;
+            padding: 14px 18px;
+            border-radius: 10px;
+            font-size: 0.95rem;
+            line-height: 1.5;
+            text-align: left;
+        }
+        .form-status.error {
+            display: block;
+            background: rgba(239, 83, 80, 0.1);
+            border: 1px solid rgba(239, 83, 80, 0.4);
+            color: #ef9a9a;
+        }
+        .form-status.error a { color: #25D366; font-weight: 600; }
 
         /* Messengers */
         .messengers { text-align: center; }
@@ -154,6 +171,7 @@
             <a href="about.html">О компании</a>
             <a href="delivery.html">Доставка</a>
             <a href="warranty.html">Гарантия</a>
+            <a href="/blog/">Блог</a>
             <a href="contacts.html" class="active">Контакты</a>
         </nav>
     </div>
@@ -233,7 +251,7 @@
         <h2 class="section-title">Форма обратной связи</h2>
         <p class="section-subtitle">Заполните форму — мы перезвоним вам в течение рабочего дня</p>
 
-        <form action="#" method="POST" style="max-width: 640px; margin: 0 auto;">
+        <form id="contactForm" novalidate style="max-width: 640px; margin: 0 auto;">
             <div class="form-grid">
                 <div class="form-group">
                     <label for="name">Ваше имя</label>
@@ -257,6 +275,7 @@
                 </div>
                 <div class="form-group full" style="text-align: center;">
                     <button type="submit" class="btn btn-primary">&#9993; Отправить</button>
+                    <div class="form-status" id="formStatus"></div>
                 </div>
             </div>
         </form>
@@ -280,6 +299,69 @@
         <p>&copy; 2025 Atrix Kazakhstan. Официальный дистрибьютор Atrix International. Все права защищены.</p>
     </div>
 </footer>
+
+<script>
+(function () {
+    var form = document.getElementById('contactForm');
+    var statusEl = document.getElementById('formStatus');
+    if (!form) return;
+
+    form.addEventListener('submit', function (e) {
+        e.preventDefault();
+
+        if (!form.checkValidity()) {
+            form.reportValidity();
+            return;
+        }
+
+        var btn = form.querySelector('button[type="submit"]');
+        btn.disabled = true;
+        btn.textContent = 'Отправка...';
+        statusEl.className = 'form-status';
+        statusEl.innerHTML = '';
+
+        var data = {
+            _subject: 'Сообщение с формы контактов — atrixkz.kz',
+            _template: 'table',
+            _captcha: 'false'
+        };
+        var waLines = ['Сообщение с сайта atrixkz.kz'];
+        var labels = {
+            name: 'Имя', email: 'Email', phone: 'Телефон',
+            company: 'Компания', message: 'Сообщение'
+        };
+        Array.prototype.forEach.call(form.elements, function (el) {
+            if (!el.name || el.type === 'submit') return;
+            if (el.value) {
+                data[el.name] = el.value;
+                waLines.push((labels[el.name] || el.name) + ': ' + el.value);
+            }
+        });
+
+        fetch('https://formsubmit.co/ajax/info@atrixkz.kz', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+            body: JSON.stringify(data)
+        })
+        .then(function (r) {
+            if (!r.ok) throw new Error('send failed');
+            return r.json();
+        })
+        .then(function () {
+            window.location.href = '/thank-you.html';
+        })
+        .catch(function () {
+            var waUrl = 'https://wa.me/77064217536?text=' + encodeURIComponent(waLines.join('\n'));
+            statusEl.className = 'form-status error';
+            statusEl.innerHTML = 'Не удалось отправить автоматически. ' +
+                '<a href="' + waUrl + '" target="_blank" rel="noopener">Отправить в WhatsApp</a> ' +
+                'или позвоните: <a href="tel:+77064217536" style="color:#F5A623">+7 706 421 75 36</a>';
+            btn.disabled = false;
+            btn.textContent = '✉ Отправить';
+        });
+    });
+})();
+</script>
 
 </body>
 </html>
