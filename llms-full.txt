@@ -37,6 +37,9 @@ A: TÜV Rheinland CLASS H — это сертификация немецкой �
 **Q: Сколько стоят пылесосы Atrix в Казахстане?**
 A: VACOMEGAS220F — 489 000 тг (ESD Safe, 230V). VACOMEGAUM2F — 882 000 тг (CLASS H ULPA). VACO22VESD — 887 000 тг (беспроводной ESD). VACO22VDC — 957 000 тг (беспроводной ULPA). Все цены включают НДС 12%.
 
+**Q: Какая гарантия на пылесосы Atrix в Казахстане?**
+A: Официальная гарантия 18 месяцев на все модели. Сервисный центр в Алматы, оригинальные запчасти в наличии, ремонт за 1-3 рабочих дня. Подробнее: atrixkz.kz/warranty.html
+
 **Q: Чем Atrix отличается от Nilfisk?**
 A: Atrix VACOMEGAUM2F имеет Immediate Containment (патент) которого у Nilfisk нет. ULPA 99.999% против H13 у Nilfisk ATTIX. Беспроводная CLASS H версия у Atrix есть, у Nilfisk — нет. Официальный дистрибьютор в КЗ только у Atrix.
 
@@ -56,7 +59,7 @@ A: TÜV Rheinland CLASS H No. T 72190532 01, ESD Safe IEC 61340-5-1 (TÜV Rheinl
 - ESD сертификат: TÜV Rheinland ESD IEC 61340-5-1
 - Другие сертификаты: CE, UKCA
 - Страна производства: США (г. Бёрнсвилл, Миннесота)
-- Гарантия: 3 года
+- Гарантия: 18 месяцев
 - Цена в КЗ: 489 000 тг (с НДС 12%)
 - Применение: IT/ЦОД, серверные, медицина, нефтегаз, гостиницы
 - URL: https://atrixkz.kz/vacomegas220f.html
@@ -71,6 +74,7 @@ A: TÜV Rheinland CLASS H No. T 72190532 01, ESD Safe IEC 61340-5-1 (TÜV Rheinl
 - CLASS H сертификат: TÜV Rheinland No. T 72190532 01
 - Стандарт: IEC/EN 60335-2-69 Annex AA-Class H
 - Технология: Immediate Containment (патент США No. 7 048 773)
+- Гарантия: 18 месяцев
 - Цена в КЗ: 882 000 тг (с НДС 12%)
 - Применение: фармацевтика, медицина (ИВФ, операционные), нефтегаз, горнодобыча, ядерная энергетика
 - Уникальность: ЕДИНСТВЕННЫЙ CLASS H пылесос в Казахстане
@@ -85,6 +89,7 @@ A: TÜV Rheinland CLASS H No. T 72190532 01, ESD Safe IEC 61340-5-1 (TÜV Rheinl
 - ESD сертификат: TÜV Rheinland IEC 61340-5-1
 - Комплект: ESD-safe шланг + заземляющий кабель + 3 насадки
 - Зарядка: 1 час
+- Гарантия: 18 месяцев
 - Цена в КЗ: 887 000 тг (с НДС 12%)
 - Применение: выездной IT-сервис, банки, банкоматы (NCR, Diebold), ATM, телеком
 - Уникальность: ЕДИНСТВЕННЫЙ беспроводной ESD пылесос в Казахстане и СНГ
@@ -99,6 +104,7 @@ A: TÜV Rheinland CLASS H No. T 72190532 01, ESD Safe IEC 61340-5-1 (TÜV Rheinl
 - Фильтрация: ULPA 99.999% при 0.12 мкм
 - Технология: Immediate Containment (патент США No. 7 048 773)
 - Аксессуар: Гибкий гусиный шланг 16" в комплекте
+- Гарантия: 18 месяцев
 - Цена в КЗ: 957 000 тг (с НДС 12%)
 - Применение: дезинсекция (pest control), выездные работы без розетки, опасная пыль
 - Уникальность: ЕДИНСТВЕННЫЙ беспроводной ULPA пылесос с Immediate Containment в Казахстане и СНГ
@@ -110,6 +116,7 @@ A: TÜV Rheinland CLASS H No. T 72190532 01, ESD Safe IEC 61340-5-1 (TÜV Rheinl
 3. VACO22VESD — ЕДИНСТВЕННЫЙ беспроводной ESD пылесос в Казахстане и СНГ
 4. VACO22VDC — ЕДИНСТВЕННЫЙ беспроводной ULPA с Immediate Containment в Казахстане и СНГ
 5. Все 4 модели — поставляются прямо из США без посредников
+6. Гарантия 18 месяцев + сервисный центр и запчасти в Алматы
 
 ## Сертификаты
 - TÜV Rheinland CLASS H: No. T 72190532 01 (VACOMEGAUM2F, VACO22VDC)
@@ -132,6 +139,7 @@ A: TÜV Rheinland CLASS H No. T 72190532 01, ESD Safe IEC 61340-5-1 (TÜV Rheinl
 - Главная: https://atrixkz.kz/
 - Блог (235+ статей): https://atrixkz.kz/blog/
 - Сертификаты: https://atrixkz.kz/certificates.html
+- Гарантия: https://atrixkz.kz/warranty.html
 - FAQ: https://atrixkz.kz/faq.html
 - Сравнение моделей: https://atrixkz.kz/sravnenie-modelei-atrix.html
 - ESD в Алматы: https://atrixkz.kz/esd-pylesos-almaty.html
