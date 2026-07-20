@@ -162,6 +162,7 @@ a:hover{opacity:.8}
   letter-spacing:.02em;
 }
 .btn-primary:hover{background:var(--gold-hover);transform:translateY(-2px);box-shadow:var(--shadow-gold)}
+.btn-primary:disabled{opacity:.6;cursor:wait;transform:none;box-shadow:none}
 .btn-secondary{
   background:transparent;color:var(--white);padding:16px 36px;border-radius:100px;
   font-size:15px;font-weight:600;border:1.5px solid var(--border);cursor:pointer;
@@ -233,6 +234,36 @@ a:hover{opacity:.8}
   font-size:14px;font-weight:600;transition:all .2s;
 }
 .product-cta:hover{background:var(--gold);color:#000}
+
+/* ═══ LEAD FORM ═══ */
+.lead-grid{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}
+.lead-text h2{font-size:clamp(26px,3.5vw,40px);font-weight:800;letter-spacing:-.02em;margin-bottom:16px}
+.lead-text p{font-size:17px;color:var(--muted);line-height:1.7;margin-bottom:24px}
+.lead-benefits{list-style:none}
+.lead-benefits li{display:flex;align-items:center;gap:12px;font-size:15px;color:var(--white);margin-bottom:12px}
+.lead-benefits li::before{content:'✓';color:var(--gold);font-weight:800}
+.lead-form{
+  background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius);
+  padding:36px;box-shadow:var(--shadow);
+}
+.lead-form h3{font-size:20px;font-weight:700;margin-bottom:6px}
+.lead-form .lead-sub{font-size:14px;color:var(--muted);margin-bottom:24px}
+.lead-form label{display:block;font-size:13px;color:var(--muted);margin-bottom:6px;font-weight:500}
+.lead-form input,.lead-form select{
+  width:100%;background:var(--bg);border:1px solid var(--border);border-radius:10px;
+  padding:13px 16px;color:var(--white);font-size:15px;font-family:inherit;
+  margin-bottom:16px;transition:border-color .2s;
+}
+.lead-form input:focus,.lead-form select:focus{outline:none;border-color:var(--gold)}
+.lead-form input::placeholder{color:#5a5a5a}
+.lead-form select{appearance:none;cursor:pointer;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%239ca3af' stroke-width='2'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 14px center}
+.lead-form select option{background:var(--bg-card);color:var(--white)}
+.lead-form .btn-primary{width:100%;justify-content:center}
+.lead-form .lead-note{font-size:12px;color:var(--muted);margin-top:12px;text-align:center;line-height:1.5}
+.lead-form .lead-note a{color:var(--gold)}
+.lead-status{display:none;margin-top:14px;padding:13px 16px;border-radius:10px;font-size:14px;line-height:1.5}
+.lead-status.error{display:block;background:rgba(239,68,68,.08);border:1px solid rgba(239,68,68,.35);color:#fca5a5}
+.lead-status.error a{color:#34d399;font-weight:600}
 
 /* ═══ FEATURES ═══ */
 .features-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:32px}
@@ -326,6 +357,7 @@ a:hover{opacity:.8}
   .cases-grid{grid-template-columns:1fr}
   .certs-grid{grid-template-columns:1fr}
   .footer-top{grid-template-columns:1fr 1fr}
+  .lead-grid{grid-template-columns:1fr;gap:40px}
 }
 @media(max-width:768px){
   /* Navigation */
@@ -364,6 +396,9 @@ a:hover{opacity:.8}
   .section-head{margin-bottom:40px}
   .section-head h2{font-size:clamp(22px,6vw,32px)}
   .section-head p{font-size:15px}
+
+  /* Lead form */
+  .lead-form{padding:24px}
 
   /* Trust bar */
   .trust{padding:24px 16px}
@@ -481,6 +516,7 @@ a:hover{opacity:.8}
     <li><a href="#why">Почему Atrix</a></li>
     <li><a href="#cases">Кейсы</a></li>
     <li><a href="/about.html">О компании</a></li>
+    <li><a href="/blog/">Блог</a></li>
     <li><a href="/contacts.html">Контакты</a></li>
   </ul>
   <div class="nav-cta-group" style="display:flex;align-items:center;gap:16px">
@@ -540,6 +576,13 @@ a:hover{opacity:.8}
       <div>
         <div style="color:var(--white);font-weight:600;font-size:15px">Сертификаты</div>
         <div style="font-size:12px;color:var(--muted);margin-top:2px">TÜV, CE, ГОСТ</div>
+      </div>
+    </a>
+    <a href="/blog/" class="mob-item" style="display:flex;align-items:center;gap:14px;padding:12px 0;border-bottom:1px solid var(--border);color:var(--muted);font-size:15px">
+      <span style="font-size:20px;width:32px;text-align:center">📚</span>
+      <div>
+        <div style="color:var(--white);font-weight:600;font-size:15px">Блог</div>
+        <div style="font-size:12px;color:var(--muted);margin-top:2px">Гайды и стандарты</div>
       </div>
     </a>
     <a href="/contacts.html" class="mob-item" style="display:flex;align-items:center;gap:14px;padding:12px 0;border-bottom:1px solid var(--border);color:var(--muted);font-size:15px">
@@ -787,8 +830,49 @@ document.querySelector('.burger').addEventListener('click',function(){
   </div>
 </section>
 
+<!-- ═══ QUICK LEAD FORM ═══ -->
+<section class="section" id="lead">
+  <div class="section-inner">
+    <div class="lead-grid">
+      <div class="lead-text">
+        <span class="section-label">Быстрый подбор</span>
+        <h2>Не знаете, какая модель подойдёт?</h2>
+        <p>Оставьте телефон — инженер перезвонит в течение 15 минут в рабочее время, подберёт модель под вашу задачу и сразу назовёт цену со сроками.</p>
+        <ul class="lead-benefits">
+          <li>Консультация и подбор — бесплатно</li>
+          <li>Бесплатная демонстрация в Алматы</li>
+          <li>КП с сертификатами — за 2 часа</li>
+          <li>Ответим в WhatsApp, если удобнее</li>
+        </ul>
+      </div>
+      <form class="lead-form" id="quickForm" novalidate>
+        <h3>Подобрать пылесос за 1 минуту</h3>
+        <p class="lead-sub">3 поля — и мы перезваниваем</p>
+        <label for="qf-name">Имя</label>
+        <input type="text" id="qf-name" name="name" placeholder="Как к вам обращаться">
+        <label for="qf-phone">Телефон <span style="color:var(--gold)">*</span></label>
+        <input type="tel" id="qf-phone" name="phone" placeholder="+7 (___) ___-__-__" required>
+        <label for="qf-industry">Отрасль</label>
+        <select id="qf-industry" name="industry">
+          <option value="" disabled selected>Выберите отрасль</option>
+          <option value="IT / ЦОД / Банк">IT / ЦОД / Банк</option>
+          <option value="Медицина / Лаборатория">Медицина / Лаборатория</option>
+          <option value="Фарма / Чистое помещение">Фарма / Чистое помещение</option>
+          <option value="Нефтегаз / Промышленность">Нефтегаз / Промышленность</option>
+          <option value="Полиграфия / Заправка картриджей">Полиграфия / Заправка картриджей</option>
+          <option value="Гостиница / Клининг">Гостиница / Клининг</option>
+          <option value="Другое">Другое</option>
+        </select>
+        <button type="submit" class="btn-primary">Подобрать пылесос →</button>
+        <div class="lead-status" id="quickFormStatus"></div>
+        <p class="lead-note">Отправляя форму, вы соглашаетесь с <a href="/privacy-policy.html" target="_blank">политикой конфиденциальности</a>. Никакого спама — только звонок по делу.</p>
+      </form>
+    </div>
+  </div>
+</section>
+
 <!-- ═══ WHY ATRIX ═══ -->
-<section class="section" id="why">
+<section class="section" id="why" style="background:var(--bg-elevated)">
   <div class="section-inner">
     <div class="section-head">
       <span class="section-label">Почему Atrix</span>
@@ -831,7 +915,7 @@ document.querySelector('.burger').addEventListener('click',function(){
 </section>
 
 <!-- ═══ COMPARISON ═══ -->
-<section class="section" style="background:var(--bg-elevated)">
+<section class="section">
   <div class="section-inner">
     <div class="section-head">
       <span class="section-label">Сравнение</span>
@@ -864,7 +948,7 @@ document.querySelector('.burger').addEventListener('click',function(){
 </section>
 
 <!-- ═══ CERTIFICATES ═══ -->
-<section class="section">
+<section class="section" style="background:var(--bg-elevated)">
   <div class="section-inner">
     <div class="section-head">
       <span class="section-label">Сертификаты</span>
@@ -898,7 +982,7 @@ document.querySelector('.burger').addEventListener('click',function(){
 </section>
 
 <!-- ═══ CASES ═══ -->
-<section class="section" id="cases" style="background:var(--bg-elevated)">
+<section class="section" id="cases">
   <div class="section-inner">
     <div class="section-head">
       <span class="section-label">Кейсы</span>
@@ -968,6 +1052,7 @@ document.querySelector('.burger').addEventListener('click',function(){
         <h4>Компания</h4>
         <ul>
           <li><a href="/about.html">О компании</a></li>
+          <li><a href="/blog/">Блог</a></li>
           <li><a href="/delivery.html">Доставка</a></li>
           <li><a href="/warranty.html">Гарантия</a></li>
           <li><a href="/certificates.html">Сертификаты</a></li>
@@ -1003,6 +1088,42 @@ document.querySelector('.burger').addEventListener('click',function(){
 (function(){
   var cf=document.getElementById('chatFrame'),fb=document.getElementById('chatFab'),o=false;
   fb.addEventListener('click',function(){o=!o;cf.style.display=o?'block':'none';fb.style.transform=o?'rotate(90deg)':'rotate(0deg)';fb.innerHTML=o?'✕':'💬';});
+})();
+</script>
+
+<!-- ═══ QUICK LEAD FORM ═══ -->
+<script>
+(function(){
+  var form=document.getElementById('quickForm');
+  var statusEl=document.getElementById('quickFormStatus');
+  if(!form)return;
+  form.addEventListener('submit',function(e){
+    e.preventDefault();
+    if(!form.checkValidity()){form.reportValidity();return;}
+    var btn=form.querySelector('button[type="submit"]');
+    btn.disabled=true;btn.textContent='Отправка...';
+    statusEl.className='lead-status';statusEl.innerHTML='';
+    var data={_subject:'Быстрый подбор с главной — atrixkz.kz',_template:'table',_captcha:'false'};
+    var waLines=['Быстрый подбор с главной atrixkz.kz'];
+    var labels={name:'Имя',phone:'Телефон',industry:'Отрасль'};
+    Array.prototype.forEach.call(form.elements,function(el){
+      if(!el.name||el.type==='submit')return;
+      if(el.value){data[el.name]=el.value;waLines.push((labels[el.name]||el.name)+': '+el.value);}
+    });
+    fetch('https://formsubmit.co/ajax/info@atrixkz.kz',{
+      method:'POST',
+      headers:{'Content-Type':'application/json','Accept':'application/json'},
+      body:JSON.stringify(data)
+    })
+    .then(function(r){if(!r.ok)throw new Error('send failed');return r.json();})
+    .then(function(){window.location.href='/thank-you.html';})
+    .catch(function(){
+      var waUrl='https://wa.me/77064217536?text='+encodeURIComponent(waLines.join('\n'));
+      statusEl.className='lead-status error';
+      statusEl.innerHTML='Не удалось отправить автоматически. <a href="'+waUrl+'" target="_blank" rel="noopener">Отправить в WhatsApp</a> или позвоните: <a href="tel:+77064217536" style="color:var(--gold)">+7 706 421 75 36</a>';
+      btn.disabled=false;btn.textContent='Подобрать пылесос →';
+    });
+  });
 })();
 </script>
 
