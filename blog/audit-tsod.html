@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Как пройти аудит в ЦОД — чек-лист из 20 пунктов | Atrix Kazakhstan</title>
+  <meta name="description" content="PDF-ready чек-лист из 20 пунктов для аудита ЦОД. Требования к уборочному оборудованию, сертификаты, документы.">
+  <link rel="canonical" href="https://atrixkz.kz/blog/audit-tsod.html">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    "name": "Как пройти аудит в ЦОД — чек-лист из 20 пунктов",
+    "description": "Пошаговое руководство по подготовке к аудиту дата-центра. Требования к уборочному оборудованию и документам.",
+    "totalTime": "PT2H",
+    "author": {"@type": "Organization", "name": "Vortex Trade", "url": "https://atrixkz.kz"},
+    "publisher": {"@type": "Organization", "name": "Atrix Kazakhstan"},
+    "datePublished": "2026-07-30"
+  }
+  </script>
+  <style>
+    :root { --c1:#0a1628; --c2:#1e3a5f; --c3:#2a9df4; --c4:#f5f7fa; --c5:#e8ecf1; --c6:#ff6b35; --ok:#28a745; }
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body { font-family:'Segoe UI',Arial,sans-serif; background:var(--c4); color:#333; line-height:1.7; }
+    .container { max-width:900px; margin:0 auto; padding:40px 20px; }
+    h1 { font-size:2.2rem; color:var(--c1); margin-bottom:20px; line-height:1.3; }
+    h2 { font-size:1.5rem; color:var(--c2); margin:40px 0 16px; border-left:4px solid var(--c3); padding-left:16px; }
+    h3 { font-size:1.2rem; color:var(--c2); margin:24px 0 12px; }
+    p { margin-bottom:16px; }
+    ul, ol { margin:16px 0; padding-left:24px; }
+    li { margin-bottom:8px; }
+    .meta { color:#666; font-size:.9rem; margin-bottom:32px; }
+    .highlight { background:var(--c5); border-radius:8px; padding:20px; margin:24px 0; border-left:4px solid var(--c6); }
+    .checklist { background:#fff; border:1px solid var(--c5); border-radius:8px; padding:24px; margin:24px 0; }
+    .checklist li { list-style:none; position:relative; padding-left:32px; margin-bottom:14px; }
+    .checklist li::before { content:"☐"; position:absolute; left:0; font-size:1.2rem; color:var(--c3); }
+    .checklist .ok::before { content:"☑"; color:var(--ok); }
+    .cta { background:var(--c1); color:#fff; padding:32px; border-radius:12px; text-align:center; margin:40px 0; }
+    .cta a { display:inline-block; background:var(--c3); color:#fff; padding:14px 32px; border-radius:6px; text-decoration:none; font-weight:600; margin-top:16px; }
+    .cta a:hover { background:#1a7bc8; }
+    .breadcrumb { font-size:.85rem; color:#666; margin-bottom:16px; }
+    .breadcrumb a { color:var(--c3); text-decoration:none; }
+    .contact-bar { background:var(--c1); color:#fff; padding:16px; text-align:center; font-size:.95rem; }
+    .contact-bar a { color:var(--c3); text-decoration:none; }
+    .print-only { display:none; }
+    @media print {
+      .contact-bar, .cta, .breadcrumb { display:none; }
+      .print-only { display:block; }
+      body { background:#fff; }
+      .container { max-width:100%; padding:20px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="contact-bar">
+    Официальный дистрибьютор Atrix в Казахстане — <a href="tel:+77064217536">+7 706 421 75 36</a> | <a href="https://wa.me/77064217536">WhatsApp</a> | <a href="mailto:info@atrixkz.kz">info@atrixkz.kz</a>
+  </div>
+  <div class="container">
+    <div class="breadcrumb"><a href="https://atrixkz.kz/">Главная</a> / <a href="https://atrixkz.kz/blog/">Руководства</a> / Аудит ЦОД</div>
+    <h1>Как пройти аудит в ЦОД — чек-лист из 20 пунктов</h1>
+    <div class="meta">30 июля 2026 · Руководство · PDF-ready · 15 минут на проверку</div>
+
+    <p class="print-only" style="text-align:center; font-size:.9rem; color:#666; margin-bottom:20px;">
+      Atrix Kazakhstan · Чек-лист аудита ЦОД · atrixkz.kz · +7 706 421 75 36
+    </p>
+
+    <p>Аудит дата-центра — это не просто проверка. Это доказательство, что ваша инфраструктура соответствует стандартам безопасности, надежности и отказоустойчивости. Этот чек-лист поможет подготовиться к аудиту и не получить критических замечаний по уборочному оборудованию.</p>
+
+    <div class="checklist">
+      <h3>🔒 Раздел 1: ESD-защита (пункты 1–5)</h3>
+      <ol>
+        <li>Все пылесосы в серверной имеют сертификат IEC 61340-5-1</li>
+        <li>На корпусе каждого пылесоса есть маркировка "ESD Safe"</li>
+        <li>Шланги выполнены из проводящего материала (не ПВХ/пластик)</li>
+        <li>Цепь заземления проверена и задокументирована</li>
+        <li>Персонал прошел обучение по ESD-безопасности</li>
+      </ol>
+
+      <h3>🛡️ Раздел 2: Фильтрация (пункты 6–10)</h3>
+      <ol start="6">
+        <li>Фильтры HEPA H13 или выше с сертификатом EN 1822</li>
+        <li>Фильтры визуально чисты, без повреждений</li>
+        <li>Журнал замены фильтров ведется и актуален</li>
+        <li>Интервал замены не превышает 12 месяцев</li>
+        <li>Запасные фильтры хранятся в запечатанной упаковке</li>
+      </ol>
+
+      <h3>📋 Раздел 3: Документация (пункты 11–14)</h3>
+      <ol start="11">
+        <li>Паспорта на все единицы оборудования на русском языке</li>
+        <li>Сертификаты соответствия (оригиналы или заверенные копии)</li>
+        <li>Декларации ТР ТС 010/2011 и ТР ТС 004/2011</li>
+        <li>Гарантийные талоны с печатью поставщика</li>
+      </ol>
+
+      <h3>🔧 Раздел 4: Техническое состояние (пункты 15–17)</h3>
+      <ol start="15">
+        <li>Корпус пылесоса цел, без трещин, уплотнители в порядке</li>
+        <li>Шланг без проколов, изломов, истирания</li>
+        <li>Мощность всасывания соответствует паспортным данным</li>
+      </ol>
+
+      <h3>📅 Раздел 5: Обслуживание (пункты 18–20)</h3>
+      <ol start="18">
+        <li>График технического обслуживания утвержден и соблюдается</li>
+        <li>Договор с сервисной организацией (при аутсорсинге)</li>
+        <li>Акты выполненных работ хранятся не менее 3 лет</li>
+      </ol>
+    </div>
+
+    <h2>Как использовать этот чек-лист</h2>
+    <ol>
+      <li><strong>Распечатайте</strong> или откройте на планшете</li>
+      <li><strong>Пройдите по каждому пункту</strong> — поставьте галочку или отметьте проблему</li>
+      <li><strong>Зафиксируйте несоответствия</strong> — дата, ответственный, срок устранения</li>
+      <li><strong>Устраните замечания</strong> за 2–4 недели до аудита</li>
+      <li><strong>Проведите повторную проверку</strong></li>
+    </ol>
+
+    <h2>Что делать, если есть несоответствия</h2>
+    <p>Если при самопроверке вы обнаружили пробелы — не паникуйте. Большинство замечаний устраняются за 1–2 недели:</p>
+    <ul>
+      <li>Нет сертификатов → закажите дубликаты у поставщика (1–3 дня)</li>
+      <li>Фильтры просрочены → замените (1 день)</li>
+      <li>Нет журнала обслуживания → создайте и заполните ретроспективно</li>
+      <li>Оборудование без ESD → замените на сертифицированное (3–7 дней)</li>
+    </ul>
+
+    <div class="highlight">
+      <strong>Совет:</strong> Аудиторы ценят не идеальное состояние, а <strong>системный подход</strong>. Если вы можете показать, что знаете о проблеме, есть план устранения и сроки — это лучше, чем скрывать недостатки.
+    </div>
+
+    <h2>Готовый пакет Atrix для аудита</h2>
+    <p>При покупке Atrix VACOMEGAS220F вы получаете всё необходимое для прохождения аудита:</p>
+    <ul>
+      <li>Сертификат ESD IEC 61340-5-1 (TÜV)</li>
+      <li>Сертификат HEPA H13 EN 1822</li>
+      <li>Декларации ТР ТС</li>
+      <li>Паспорт и руководство на русском</li>
+      <li>Журнал обслуживания (шаблон)</li>
+      <li>Гарантия 2 года</li>
+    </ul>
+
+    <div class="cta">
+      <h3>Получить пакет документов для аудита</h3>
+      <p>Подготовим за 24 часа, консультация по подготовке бесплатно</p>
+      <a href="https://wa.me/77064217536">Написать в WhatsApp</a>
+      <p style="margin-top:12px; font-size:.9rem;">Телефон: <a href="tel:+77064217536" style="color:#fff;">+7 706 421 75 36</a></p>
+    </div>
+
+    <h3>Читайте также:</h3>
+    <ul>
+      <li><a href="https://atrixkz.kz/blog/vybor-promyshlennogo-pylesosa.html">Руководство по выбору промышленного пылесоса — 10 шагов</a></li>
+      <li><a href="https://atrixkz.kz/blog/roi-kalkulyator.html">Калькулятор ROI — пылесос с ESD-защитой vs обычный</a></li>
+      <li><a href="https://atrixkz.kz/blog/esd-zashchita-tsod.html">ESD-защита в ЦОД — почему обычный пылесос опасен</a></li>
+    </ul>
+  </div>
+  <div class="contact-bar">
+    © 2026 Vortex Trade — официальный дистрибьютор Atrix в Казахстане · Алматы, мкр. Баянауыл 57А · <a href="https://atrixkz.kz/">atrixkz.kz</a>
+  </div>
+</body>
+</html>
