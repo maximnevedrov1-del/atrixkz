@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="ru"><head><meta charset="utf-8"><title>КП Atrix KZ — Сервис оргтехники · IT · ЦОД</title><meta name="viewport" content="width=device-width, initial-scale=1"><style>
+@page { size: A4; margin: 0; }
+* { box-sizing: border-box; }
+body { margin: 0; padding: 0; }
+.page {
+  width: 210mm; height: 297mm; margin: 0; position: relative; overflow: hidden;
+  background: #f4efe6; padding: 11mm 12mm 10mm 12mm;
+  font-family: Georgia, 'Times New Roman', serif; color: #1c1a17;
+  page-break-after: always;
+}
+.topbar { display: flex; justify-content: space-between; align-items: baseline;
+  border-bottom: 0.4pt solid #c9c2b2; padding-bottom: 2.2mm; }
+.brand { font-size: 8.5pt; font-weight: bold; letter-spacing: 2.5px; color: #c8902e; }
+.topright { font-size: 5.8pt; letter-spacing: 1.6px; color: #8a8272; text-transform: uppercase; }
+.chips { margin-top: 4mm; }
+.chip { display: inline-block; font-size: 5.8pt; letter-spacing: 1.4px; text-transform: uppercase;
+  color: #8a6a20; border: 0.5pt solid #c8902e; padding: 1.1mm 2.2mm; margin-right: 1.6mm; background: #faf6ec; }
+h1 { font-size: 19pt; line-height: 1.14; margin: 4.5mm 0 3mm 0; font-weight: bold; color: #14120f; }
+.lead { font-size: 8.2pt; line-height: 1.45; color: #3d3a34; margin: 0 0 3.5mm 0; max-width: 165mm; }
+.duo { display: flex; gap: 6mm; margin-bottom: 3.5mm; border-top: 0.4pt solid #d8d2c4; border-bottom: 0.4pt solid #d8d2c4; padding: 2.4mm 0; }
+.duo div { flex: 1; }
+.lbl { font-size: 5.6pt; letter-spacing: 1.8px; text-transform: uppercase; color: #c8902e; margin-bottom: 1.2mm; font-weight: bold; }
+.duo p { font-size: 7.6pt; line-height: 1.4; color: #33302b; margin: 0; }
+.sectitle { font-size: 6.2pt; letter-spacing: 2px; text-transform: uppercase; color: #8a8272; margin: 1mm 0 2mm 0; }
+.prod { border: 0.6pt solid #d8d2c4; background: #faf7f0; padding: 2.6mm 3mm; margin-bottom: 2.4mm;
+  display: flex; justify-content: space-between; page-break-inside: avoid; }
+.prod .info { flex: 1; padding-right: 4mm; }
+.prod .art { font-size: 5.6pt; letter-spacing: 1.5px; color: #c8902e; text-transform: uppercase; margin-bottom: 0.8mm; }
+.prod .name { font-size: 9.5pt; font-weight: bold; margin-bottom: 1.2mm; color: #14120f; }
+.prod .specs { font-size: 7pt; color: #4a463f; line-height: 1.4; margin-bottom: 1.2mm; }
+.prod .bul { font-size: 6.8pt; color: #6b6558; line-height: 1.4; }
+.prod .bul b { color: #4a463f; }
+.price { text-align: right; min-width: 34mm; display: flex; flex-direction: column; justify-content: center; }
+.price .pl { font-size: 5.4pt; letter-spacing: 1.5px; color: #8a8272; text-transform: uppercase; margin-bottom: 1mm; }
+.price .pv { font-size: 12.5pt; font-weight: bold; color: #14120f; white-space: nowrap; }
+.price .pn { font-size: 5.8pt; color: #8a8272; margin-top: 0.6mm; }
+.cons { margin-top: 1mm; border-left: 2pt solid #c8902e; padding: 1.6mm 0 1.6mm 3mm; background: #faf6ec; }
+.cons p { font-size: 7.2pt; line-height: 1.45; color: #3d3a34; margin: 0; }
+.terms { display: flex; gap: 5mm; margin-top: 2.6mm; }
+.terms div { flex: 1; border-top: 0.4pt solid #d8d2c4; padding-top: 1.6mm; }
+.terms p { font-size: 6.6pt; line-height: 1.4; color: #5a554a; margin: 0; }
+.footer { position: absolute; bottom: 8mm; left: 12mm; right: 12mm;
+  border-top: 0.8pt solid #1c1a17; padding-top: 2.4mm; display: flex; justify-content: space-between; align-items: flex-end; }
+.footer .cta { font-size: 9pt; font-weight: bold; color: #14120f; }
+.footer .ct { font-size: 7.4pt; color: #3d3a34; text-align: right; line-height: 1.5; }
+.footer .ct b { color: #c8902e; }
+.distline { font-size: 5.8pt; letter-spacing: 1.2px; text-transform: uppercase; color: #8a8272; margin-top: 1.4mm; }
+.printbtn { position: fixed; top: 14px; right: 14px; z-index: 99; font-family: Georgia, serif;
+  font-size: 12px; letter-spacing: 1px; background: #1c1a17; color: #f4efe6; border: none;
+  padding: 9px 16px; cursor: pointer; }
+.backlink { position: fixed; top: 14px; left: 14px; z-index: 99; font-family: Georgia, serif;
+  font-size: 12px; color: #c8902e; text-decoration: none; background: #faf6ec; border: 1px solid #c8902e; padding: 8px 14px; }
+@media print { .printbtn, .backlink { display: none; } body { -webkit-print-color-adjust: exact; print-color-adjust: exact; } }
+@media screen { body { background: #e8e2d5; } .page { margin: 60px auto; } }
+</style></head>
+<body>
+<a class="backlink" href="index.html">← Все отраслевые КП</a>
+<button class="printbtn" onclick="window.print()">Скачать / печать PDF</button>
+<div class="page">
+  <div class="topbar">
+    <div class="brand">ATRIX KZ</div>
+    <div class="topright">Коммерческое предложение · Сервис оргтехники · IT · ЦОД · 2026</div>
+  </div>
+  <div class="chips"><span class="chip">Toner-Safe</span><span class="chip">ESD</span><span class="chip">HEPA H13</span><span class="chip">Мотор США · 1000 ч</span></div>
+  <h1>Тонер убивает технику, которую вы обслуживаете</h1>
+  <p class="lead">ESD-пылесосы Atrix для сервиса оргтехники, IT-отделов и дата-центров: безопасное удаление тонера — мельчайшей проводящей пыли — без разряда, россыпи и вторичного загрязнения. Картридж 31700C удерживает то, что обычный фильтр пропускает насквозь, а ESD-отвод на землю защищает плату форматтера при чистке.</p>
+  <div class="duo">
+    <div><div class="lbl">Для кого</div><p>Сервисные центры принтеров и МФУ, IT-отделы банков и квазигоссектора, дата-центры, телеком-операторы, провайдеры аутсорсинга печати.</p></div>
+    <div><div class="lbl">Что решаем</div><p>Тонер на плате и оптике после чистки, разряд статики на электронику, россыпь при замене мешка, повторные ремонты и гарантийные возвраты.</p></div>
+  </div>
+  <div class="sectitle">Рекомендуемые модели</div>
+  
+    <div class="prod">
+      <div class="info">
+        <div class="art">01 / 04 · VACOMEGAS220F</div>
+        <div class="name">Omega Supreme Plus Type H12 Electronic</div>
+        <div class="specs">Type H12 · 88% @ 0,3 мкм · 450 Вт · 86 CFM · 69 дБ · мотор Ametek Advantek II 1000 ч · гарантия 3 года · США</div>
+        <div class="bul"><b>Создан именно под тонер</b> ▸ Картридж 31700C — немедленное удержание ▸ ESD-защита ▸ Сетевой фильтр EMI/RFI</div>
+      </div>
+      <div class="price">
+        <div class="pl">Цена с НДС</div>
+        <div class="pv">265 000 ₸</div>
+        <div class="pn"></div>
+      </div>
+    </div>
+    <div class="prod">
+      <div class="info">
+        <div class="art">02 / 04 · VACOMEGAS220FCT</div>
+        <div class="name">Omega Supreme Plus HEPA H13 — для ЦОД</div>
+        <div class="specs">HEPA H13 · картридж OF612HE · 450 Вт · ESD · для дата-центров, телеком-узлов и серверных</div>
+        <div class="bul">Максимальная фильтрация HEPA H13 для зон с критичной электроникой и требованиями к чистоте воздуха.</div>
+      </div>
+      <div class="price">
+        <div class="pl">Цена с НДС</div>
+        <div class="pv">270 000 ₸</div>
+        <div class="pn"></div>
+      </div>
+    </div>
+    <div class="prod">
+      <div class="info">
+        <div class="art">03 / 04 · VACO22VESD</div>
+        <div class="name">Omega Cordless ESD — выездной сервис</div>
+        <div class="specs">Аккумулятор 22 В · картридж 31700C · ESD-шланг и заземление в комплекте · 30+ мин автономности</div>
+        <div class="bul">Сервис банкоматов, терминалов и кассового оборудования в поле — без привязки к розетке.</div>
+      </div>
+      <div class="price">
+        <div class="pl">Цена с НДС</div>
+        <div class="pv">680 000 ₸</div>
+        <div class="pn"></div>
+      </div>
+    </div>
+    <div class="prod">
+      <div class="info">
+        <div class="art">04 / 04 · VACEXP-03F / VACEXP-04F</div>
+        <div class="name">Express Office / Safety — младшая линейка</div>
+        <div class="specs">Компактный тонер-пылесос · 230 В · картридж немедленного удержания (HEPA — у 04F) · ESD-насадки в комплекте</div>
+        <div class="bul">Входной билет в профессиональный сервис для небольших мастерских и IT-отделов.</div>
+      </div>
+      <div class="price">
+        <div class="pl">Цена с НДС</div>
+        <div class="pv">от 175 000 ₸</div>
+        <div class="pn"></div>
+      </div>
+    </div>
+  <div class="cons"><div class="lbl">Расходники и сервис</div><p>Картриджи 31700C и HEPA OF612HE, тонер-салфетки, ESD-шланги и заземления, полевые ESD-комплекты ATIESD — оригинальные расходники со склада, без риска несовместимого фильтра.</p></div>
+  <div class="terms">
+    <div><div class="lbl">Статус</div><p>Официальный дистрибьютор Atrix International (США) в Казахстане и Центральной Азии. Гарантия производителя, без серого импорта.</p></div>
+    <div><div class="lbl">Условия</div><p>Цены указаны в тенге с НДС 16%, включая доставку и таможенное оформление. Поставка со склада в Алматы или под заказ 30–45 дней.</p></div>
+    <div><div class="lbl">Документы</div><p>Счёт, договор поставки, сертификаты, техническое заключение под объект — пригодно для тендеров и проверок.</p></div>
+  </div>
+  <div class="footer">
+    <div>
+      <div class="cta">Оставить заявку →</div>
+      <div class="distline">Технологии безопасной чистоты · atrixkz.kz</div>
+    </div>
+    <div class="ct">Телефон: <b>+7 706 421 75 36</b><br>Email: <b>info@atrixkz.kz</b> · Сайт: <b>atrixkz.kz</b></div>
+  </div>
+</div>
+</body></html>

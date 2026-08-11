@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ru"><head><meta charset="utf-8"><title>КП Atrix KZ — Медицина & чистые помещения</title><meta name="viewport" content="width=device-width, initial-scale=1"><style>
+@page { size: A4; margin: 0; }
+* { box-sizing: border-box; }
+body { margin: 0; padding: 0; }
+.page {
+  width: 210mm; height: 297mm; margin: 0; position: relative; overflow: hidden;
+  background: #f4efe6; padding: 11mm 12mm 10mm 12mm;
+  font-family: Georgia, 'Times New Roman', serif; color: #1c1a17;
+  page-break-after: always;
+}
+.topbar { display: flex; justify-content: space-between; align-items: baseline;
+  border-bottom: 0.4pt solid #c9c2b2; padding-bottom: 2.2mm; }
+.brand { font-size: 8.5pt; font-weight: bold; letter-spacing: 2.5px; color: #c8902e; }
+.topright { font-size: 5.8pt; letter-spacing: 1.6px; color: #8a8272; text-transform: uppercase; }
+.chips { margin-top: 4mm; }
+.chip { display: inline-block; font-size: 5.8pt; letter-spacing: 1.4px; text-transform: uppercase;
+  color: #8a6a20; border: 0.5pt solid #c8902e; padding: 1.1mm 2.2mm; margin-right: 1.6mm; background: #faf6ec; }
+h1 { font-size: 19pt; line-height: 1.14; margin: 4.5mm 0 3mm 0; font-weight: bold; color: #14120f; }
+.lead { font-size: 8.2pt; line-height: 1.45; color: #3d3a34; margin: 0 0 3.5mm 0; max-width: 165mm; }
+.duo { display: flex; gap: 6mm; margin-bottom: 3.5mm; border-top: 0.4pt solid #d8d2c4; border-bottom: 0.4pt solid #d8d2c4; padding: 2.4mm 0; }
+.duo div { flex: 1; }
+.lbl { font-size: 5.6pt; letter-spacing: 1.8px; text-transform: uppercase; color: #c8902e; margin-bottom: 1.2mm; font-weight: bold; }
+.duo p { font-size: 7.6pt; line-height: 1.4; color: #33302b; margin: 0; }
+.sectitle { font-size: 6.2pt; letter-spacing: 2px; text-transform: uppercase; color: #8a8272; margin: 1mm 0 2mm 0; }
+.prod { border: 0.6pt solid #d8d2c4; background: #faf7f0; padding: 2.6mm 3mm; margin-bottom: 2.4mm;
+  display: flex; justify-content: space-between; page-break-inside: avoid; }
+.prod .info { flex: 1; padding-right: 4mm; }
+.prod .art { font-size: 5.6pt; letter-spacing: 1.5px; color: #c8902e; text-transform: uppercase; margin-bottom: 0.8mm; }
+.prod .name { font-size: 9.5pt; font-weight: bold; margin-bottom: 1.2mm; color: #14120f; }
+.prod .specs { font-size: 7pt; color: #4a463f; line-height: 1.4; margin-bottom: 1.2mm; }
+.prod .bul { font-size: 6.8pt; color: #6b6558; line-height: 1.4; }
+.prod .bul b { color: #4a463f; }
+.price { text-align: right; min-width: 34mm; display: flex; flex-direction: column; justify-content: center; }
+.price .pl { font-size: 5.4pt; letter-spacing: 1.5px; color: #8a8272; text-transform: uppercase; margin-bottom: 1mm; }
+.price .pv { font-size: 12.5pt; font-weight: bold; color: #14120f; white-space: nowrap; }
+.price .pn { font-size: 5.8pt; color: #8a8272; margin-top: 0.6mm; }
+.cons { margin-top: 1mm; border-left: 2pt solid #c8902e; padding: 1.6mm 0 1.6mm 3mm; background: #faf6ec; }
+.cons p { font-size: 7.2pt; line-height: 1.45; color: #3d3a34; margin: 0; }
+.terms { display: flex; gap: 5mm; margin-top: 2.6mm; }
+.terms div { flex: 1; border-top: 0.4pt solid #d8d2c4; padding-top: 1.6mm; }
+.terms p { font-size: 6.6pt; line-height: 1.4; color: #5a554a; margin: 0; }
+.footer { position: absolute; bottom: 8mm; left: 12mm; right: 12mm;
+  border-top: 0.8pt solid #1c1a17; padding-top: 2.4mm; display: flex; justify-content: space-between; align-items: flex-end; }
+.footer .cta { font-size: 9pt; font-weight: bold; color: #14120f; }
+.footer .ct { font-size: 7.4pt; color: #3d3a34; text-align: right; line-height: 1.5; }
+.footer .ct b { color: #c8902e; }
+.distline { font-size: 5.8pt; letter-spacing: 1.2px; text-transform: uppercase; color: #8a8272; margin-top: 1.4mm; }
+.printbtn { position: fixed; top: 14px; right: 14px; z-index: 99; font-family: Georgia, serif;
+  font-size: 12px; letter-spacing: 1px; background: #1c1a17; color: #f4efe6; border: none;
+  padding: 9px 16px; cursor: pointer; }
+.backlink { position: fixed; top: 14px; left: 14px; z-index: 99; font-family: Georgia, serif;
+  font-size: 12px; color: #c8902e; text-decoration: none; background: #faf6ec; border: 1px solid #c8902e; padding: 8px 14px; }
+@media print { .printbtn, .backlink { display: none; } body { -webkit-print-color-adjust: exact; print-color-adjust: exact; } }
+@media screen { body { background: #e8e2d5; } .page { margin: 60px auto; } }
+</style></head>
+<body>
+<a class="backlink" href="index.html">← Все отраслевые КП</a>
+<button class="printbtn" onclick="window.print()">Скачать / печать PDF</button>
+<div class="page">
+  <div class="topbar">
+    <div class="brand">ATRIX KZ</div>
+    <div class="topright">Коммерческое предложение · Медицина & чистые помещения · 2026</div>
+  </div>
+  <div class="chips"><span class="chip">ISO 5 / Class 100</span><span class="chip">HEPA 99,97%</span><span class="chip">Antimicrobial</span><span class="chip">GMP</span></div>
+  <h1>Стерильность без единой частицы</h1>
+  <p class="lead">Антимикробные HEPA-пылесосы Atrix для медицины и фармацевтики: поддержание класса чистоты ISO 5 / Class 100 без риска вторичного загрязнения. Двойные HEPA-фильтры на впуске и выпуске исключают утечку частиц, материалы с Microban подавляют рост бактерий — соответствие доказуемо для аттестации и GMP-аудита.</p>
+  <div class="duo">
+    <div><div class="lbl">Для кого</div><p>Больницы и хирургические центры, фармацевтические производства, микробиологические лаборатории, ЦСО, чистые помещения ISO 5–8.</p></div>
+    <div><div class="lbl">Что решаем</div><p>Вторичное загрязнение при уборке, срыв класса чистоты ISO 5, рост бактерий в технике, прохождение аттестации и GMP-аудита.</p></div>
+  </div>
+  <div class="sectitle">Рекомендуемые модели</div>
+  
+    <div class="prod">
+      <div class="info">
+        <div class="art">01 / 03 · ATIBCV2</div>
+        <div class="name">Antimicrobial Class 100 Cleanroom HEPA</div>
+        <div class="specs">HEPA 99,97% многоступенчатая · ISO 5 / Class 100 · 1000 Вт · 118 CFM · 64 дБ · бак 6 гал · антимикробные корпус и шланг · Италия</div>
+        <div class="bul"><b>Двойные HEPA — нет утечки частиц</b> ▸ Сверхтихая работа 64 дБ ▸ Индикатор заполнения бака ▸ Материалы Microban</div>
+      </div>
+      <div class="price">
+        <div class="pl">Цена с НДС</div>
+        <div class="pv">830 000 ₸</div>
+        <div class="pn"></div>
+      </div>
+    </div>
+    <div class="prod">
+      <div class="info">
+        <div class="art">02 / 03 · VACOMEGAS2ECRH</div>
+        <div class="name">Cleanroom HEPA — фильтрованный выхлоп</div>
+        <div class="specs">HEPA · фильтрованный выхлоп воздуха · 230 В · для чистых зон электроники, оптики, лабораторий</div>
+        <div class="bul">Вторая ступень линейки — где нужен чистый выхлоп, но не требуется антимикробный корпус.</div>
+      </div>
+      <div class="price">
+        <div class="pl">Цена с НДС</div>
+        <div class="pv">540 000 ₸</div>
+        <div class="pn"></div>
+      </div>
+    </div>
+    <div class="prod">
+      <div class="info">
+        <div class="art">03 / 03 · VACOMEGAS2ECRU</div>
+        <div class="name">Cleanroom ULPA — фильтрованный выхлоп</div>
+        <div class="specs">ULPA · фильтрованный выхлоп воздуха · 230 В · максимальная фильтрация для критичных чистых зон</div>
+        <div class="bul">ULPA-уровень удержания частиц для самых требовательных зон лабораторий и микроэлектроники.</div>
+      </div>
+      <div class="price">
+        <div class="pl">Цена с НДС</div>
+        <div class="pv">550 000 ₸</div>
+        <div class="pn"></div>
+      </div>
+    </div>
+  <div class="cons"><div class="lbl">Расходники и сервис</div><p>Оригинальные первичные и вторичные HEPA-фильтры (ATIBCVH1/H2), антимикробные мешки (ATIBCVBAG), антимикробные шланги и насадки с Microban — всегда на складе, замена без остановки аттестации.</p></div>
+  <div class="terms">
+    <div><div class="lbl">Статус</div><p>Официальный дистрибьютор Atrix International (США) в Казахстане и Центральной Азии. Гарантия производителя, без серого импорта.</p></div>
+    <div><div class="lbl">Условия</div><p>Цены указаны в тенге с НДС 16%, включая доставку и таможенное оформление. Поставка со склада в Алматы или под заказ 30–45 дней.</p></div>
+    <div><div class="lbl">Документы</div><p>Счёт, договор поставки, сертификаты, техническое заключение под объект — пригодно для тендеров и проверок.</p></div>
+  </div>
+  <div class="footer">
+    <div>
+      <div class="cta">Оставить заявку →</div>
+      <div class="distline">Технологии безопасной чистоты · atrixkz.kz</div>
+    </div>
+    <div class="ct">Телефон: <b>+7 706 421 75 36</b><br>Email: <b>info@atrixkz.kz</b> · Сайт: <b>atrixkz.kz</b></div>
+  </div>
+</div>
+</body></html>
