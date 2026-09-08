@@ -1,0 +1,492 @@
+- id: vac
+  name: Промышленные пылесосы Atrix
+  desc: 'Специализированные пылесосы Atrix (США) для задач, где бытовая техника неприменима: немагнитные MRI-safe для томографов, антимикробные для чистых помещений ISO 5 / Class 100, сертифицированные
+    ULPA H14 Class H для асбеста и свинца по IEC/EN 60335-2-69, ESD-пылесосы для тонера и электроники, рюкзачные HEPA-модели для клининга и авиации (400 Гц), аккумуляторные серии 22/26 В. Официальная поставка
+    в Казахстан и Центральную Азию.'
+  items:
+  - sku: VACBPAIC
+    name: Аккумуляторный рюкзачный пылесос Atrix Ergo Pro Cordless 26 В
+    desc: Беспроводной рюкзачный HEPA-пылесос с аккумулятором 26 В и зарядным устройством с тремя кабелями (USA/Euro/UK). Для кинотеатров, транспорта, трибун и салонов самолётов — там, где мешает провод.
+    tags: промышленный пылесос Atrix, купить в Казахстане, HEPA фильтрация, официальный дистрибьютор
+    en: Ergo Pro Cordless Backpack Vacuum
+    kit:
+    - BPAIBAT - 26V Battery
+    - 'BPAICHG - Battery Charger w/3 Cords: USA, Euro, UK VACBPAI39 - 5.5''Hose, Two Piece Aluminum Wand: VACBPAI37 - Hose End'
+    - VACBPAI38 Utensil End
+    - VACBPAI34- Floor Tool with Scallops
+    - VACBPAI35- Floor Tool, Bristles
+    - VACBPAI36- Crevice/Corner Tool
+    - VACBPAI33- Round Brush
+    - VACBPAI32- Upholstery Tool and Brush
+    - VACBP6- Hepa Bag (2)
+    - VACBP8- Shakeout Bag
+    - BPFILPACK -Premotor and Exhaust Filter Set
+  - sku: ATIBCV2
+    name: Антимикробный HEPA-пылесос Atrix Biocide Class 100 Cleanroom (230 В)
+    desc: 'Пылесос для чистых помещений ISO 5 / Class 100: двойная HEPA-фильтрация на впуске и выпуске, материалы с Microban против роста бактерий. Доказуемое соответствие для аттестации и GMP-аудита.'
+    tags: промышленный пылесос Atrix, купить в Казахстане, HEPA фильтрация, официальный дистрибьютор
+    en: ''
+    kit: []
+  - sku: VACO22VUM2F
+    name: Аккумуляторный пылесос Atrix Omega Cordless Class H14, сертификат IEC/EN 60335-2-69
+    desc: 'Единственный аккумуляторный пылесос с сертификатом Class H по IEC/EN 60335-2-69 Annex AA. ULPA H14 — для объектов без электроснабжения: крыши, фасады, мобильные бригады по опасной пыли.'
+    tags: промышленный пылесос Atrix, купить в Казахстане, HEPA фильтрация, официальный дистрибьютор
+    en: ''
+    kit: []
+  - sku: ATIHCTV5E
+    name: Промышленный тонер-пылесос Atrix HCTV 5 Gallon, флагман (230 В)
+    desc: Флагманская 5-галлонная станция для максимальных потоков тонера. Тихий мотор Ametek Advantek II, ESD Safe toner-proof шланг, сертификат CE. Для крупных типографий и производств печати.
+    tags: промышленный пылесос Atrix, купить в Казахстане, HEPA фильтрация, официальный дистрибьютор
+    en: HCTV Vacuum 5 Gallon (230V)
+    kit:
+    - High capacity ESD Safe Toner Vacuum. One Super-flex
+    - ESD Safe Toner-Proof Hose
+    - ESD Safe Crevice Tool w/ Brush, 16" ESD Safe Rubber Flex-Neck tool, Roller Base, NO Power Cord. Quiet Ametek Advantek II Motor. CE Approved.
+  - sku: VACO22VDC
+    name: Аккумуляторный пылесос Atrix Omega Cordless ULPA H14 (22 В)
+    desc: Беспроводной пылесос с ULPA-фильтром немедленного удержания, бесщёточный мотор 22 В, 30+ минут работы, заряд 1 час. 67 дБ. Для RRP-бригад по свинцу, силикату, стекловолокну и плесени.
+    tags: промышленный пылесос Atrix, купить в Казахстане, HEPA фильтрация, официальный дистрибьютор
+    en: Omega Cordless Immediate Containment Vacuum
+    kit:
+    - VACOBAT- 22 Volt Battery, 30+ minute run time
+    - 'VACOCHG- Charger 1 hr w/3 Cords: USA, Euro, UK'
+    - OF712UL- Immediate Containment ULPA Filter Cartridge
+    - 730030- Crevice Tool
+    - 31652- Crevice Tool Brush
+    - 31657- 16" Flexible Gooseneck Tool
+    - 31671- 10'Stretch Hose
+    - 410017- Disposable Filter Plug
+    - AVPA005- Hose End Plug (2)
+    - AVPA011- Utility Nozzle
+    - AVPA016- Adjustable Shoulder Strap
+    - AVPA017- Utility Nozzle Brush, Permanently, Attached Heavy Duty Filter Plug, Built-in Full Filter Indicator Light
+  - sku: VACO22VESD
+    name: Аккумуляторный ESD-пылесос Atrix Omega Cordless ESD (22 В)
+    desc: 'Выездной ESD-пылесос для мобильных инженеров: банкоматы, терминалы, кассовое оборудование. Аккумулятор 22 В, ESD-шланг с заземляющим шнуром, 30+ минут автономности.'
+    tags: промышленный пылесос Atrix, купить в Казахстане, HEPA фильтрация, официальный дистрибьютор
+    en: Omega Cordless ESD Vacuum
+    kit:
+    - VACOBAT- 22 Volt Battery, 30+ minute run time
+    - 'VACOCHG- Charger 1 hr. w/3 Cords: USA, Euro, UK'
+    - 31700C- Immediate Containment Fine Filtration Filter Cartridge
+    - 31654- ESD Safe Crevice Tool
+    - 31657- ESD Safe Flexible Gooseneck Tool
+    - 31671STUD- ESD Safe 10’, Stretch Hose w/10MM Male Stud
+    - 510-001-006- ESD Ground Cord w/10MM Female, Stud and Alligator Clip
+    - 410017- Disposable Filter Plug
+    - AVPA005- Hose End Plug (2)
+    - AVPA016- Adjustable Shoulder Strap, Permanently Attached Heavy Duty Filter Plug, Built-In Full Filter Indicator Light
+  - sku: ATIHCTV5F
+    name: Промышленный тонер-пылесос Atrix High Capacity Ultrafine ESD (230 В)
+    desc: Станция для тонерной пыли с баком-фильтром 5 галлонов немедленного удержания. ESD-исполнение, роликовая база, полный комплект ESD-насадок. Для типографий и сервисных центров.
+    tags: промышленный пылесос Atrix, купить в Казахстане, HEPA фильтрация, официальный дистрибьютор
+    en: High Capacity Ultrafine ESD Safe Vacuum (230V)
+    kit:
+    - 66021A- 230V European Detachable Power Cord
+    - 31652- Crevice Tool Brush
+    - 31654- ESD Safe Crevice Tool
+    - 31657- ESD Safe Flexible Gooseneck Tool
+    - 31671- 10'ESD Safe Stretch Hose
+    - 421-000-002- Immediate Containment Fine Filtration Filter
+    - 421-000-105- Roller Base
+  - sku: VACOMEGAUM2F
+    name: Пылесос Atrix Omega Supreme Plus Class H14 ULPA
+    desc: 'Пылесос класса H14 с ULPA-картриджем немедленного удержания OF712UL: 99,999 % частиц при 0,12 мкм. Индикатор заполнения фильтра, заглушки для безопасной транспортировки. Для асбеста, свинца,
+      силиката.'
+    tags: промышленный пылесос Atrix, купить в Казахстане, HEPA фильтрация, официальный дистрибьютор
+    en: Omega Supreme Plus CLASS H14 Vacuum
+    kit:
+    - OF712UL-H14-ULPA Immediate Containment Filter Cartridge
+    - 66021A -230V Detachable European Power Cord
+    - AVPA004 - Large Filter Plug
+    - AVPA005 - Hose End Plug (2)
+    - AVPA008 - 5.6'Clear Hose
+    - AVPA011 - Utility Nozzle
+    - AVPA017 - Utility Nozzle Brush
+    - AVPA016 - Adjustable Shoulder Strap
+    - ATIFRT - Filter Retention Bracket w/Screw and Nut
+    - UE7022BK - 18" Extension Wand (2), Permanently Attached Heavy Duty Filter Plug, Built-In Full Filter Indicator Light
+  - sku: VACOMEGAS2ECRU
+    name: ULPA-пылесос для чистых помещений Atrix Cleanroom ULPA (230 В)
+    desc: Чиструм-пылесос с ULPA-фильтрацией — уровень удержания частиц выше HEPA. Фильтрованный выхлоп, ESD-шланг. Для самых требовательных зон лабораторий и производств.
+    tags: промышленный пылесос Atrix, купить в Казахстане, HEPA фильтрация, официальный дистрибьютор
+    en: Cleanroom ULPA Vacuum  - w/ Filtered Air Exhaust (230V)
+    kit:
+    - Includes 10' ESD Safe Hose
+    - ESD Safe Flexneck, and Utility Nozzle, Shoulder Strap. Quiet Ametek Advantek II Motor.  No Power Cord.
+  - sku: VACBPAI400
+    name: Авиационный рюкзачный HEPA-пылесос Atrix Ergo Pro 400 Гц
+    desc: Флагманский авиационный пылесос Ergo Pro с питанием 400 Гц от бортовой сети самолёта. Полный комплект насадок Ergo Pro, HEPA-фильтрация, рюкзачный формат для узкого салона.
+    tags: промышленный пылесос Atrix, купить в Казахстане, HEPA фильтрация, официальный дистрибьютор
+    en: Ergo Pro 400HZ Aviation Backpack HEPA Vacuum
+    kit:
+    - VACBPAI39- 5.5'Hose
+    - VACBPAI37- Hose End Extension
+    - VACBPAI38- Utensil End Extension
+    - VACBPAI34- Floor Tool with Scallops
+    - VACBPAI35- Floor Tool, Bristles
+    - VACBPAI36- Crevice Tool
+    - VACBPAI33- Oval Brush
+    - VACBPAI32- Upholstery Brush
+    - BP99- Extension Cord Relief
+    - VACBP6- HEPA Bag (2)
+    - VACBP8- Shakeout Bag
+    - BPFILPACK- Premotor and Exhaust Filter Set
+  - sku: VACOMEGAS2ECRH
+    name: Пылесос для чистых помещений Atrix Cleanroom HEPA (230 В)
+    desc: HEPA-пылесос с фильтрованным выхлопом воздуха для чистых зон электроники, оптики и лабораторий. Тихий мотор Ametek Advantek II, ESD-шланг 10 футов в комплекте.
+    tags: промышленный пылесос Atrix, купить в Казахстане, HEPA фильтрация, официальный дистрибьютор
+    en: Cleanroom HEPA Vacuum   - w/ Filtered Air Exhaust (230V)
+    kit:
+    - Includes 10' ESD Safe Hose
+    - ESD Safe Flexneck, and Utility Nozzle, Shoulder Strap. Quiet Ametek Advantek II Motor.  No Power Cord.
+  - sku: VACOS220MRI
+    name: Немагнитный пылесос Atrix Omega Green Supreme MRI (230 В)
+    desc: 'Единственный в мире MRI-safe пылесос: немагнитное исполнение для комнаты сканирования МРТ. Защита томографа от «штуцер-эффекта». Тихий мотор Ametek с шумоглушителями, HEPA-фильтр.'
+    tags: промышленный пылесос Atrix, купить в Казахстане, HEPA фильтрация, официальный дистрибьютор
+    en: Omega Green Supreme MRI Vacuum (230V)
+    kit:
+    - Quiet Ametek Advantek II Motor with sound baffles, self-storing utensils (cover insert), 15' ESD NonMetallic Hose
+    - ESD Crevice Tool, 16" ESD Safe Flexneck, Shoulder Strap w/ D-Rings
+    - HEPA Filter, Electronic Line Filter, NO Power Cord, Fully Statically Controlled.
+  - sku: VACBP400
+    name: Авиационный рюкзачный HEPA-пылесос Atrix Ergo 400 Гц
+    desc: Пылесос для уборки салонов самолётов с питанием от бортовой сети 400 Гц. Адаптер-воздуходувка, турбощётка с воздушным приводом, насадки для мебели и пола. Уборка салона за время стыковки рейса.
+    tags: промышленный пылесос Atrix, купить в Казахстане, HEPA фильтрация, официальный дистрибьютор
+    en: Ergo 400HZ Aviation Backpack HEPA Vacuum
+    kit:
+    - BP4 - 6' Hose
+    - BP17 - Blower Adapter
+    - BP18 - Exhaust Filter Cover
+    - BP39 - Extension Wand, 22"-37"
+    - BP45 - Set of 3 Blower Nozzles
+    - BP40 - Furniture Nozzle
+    - BP41 - Crevice Tool
+    - BP42 - Oval Dust Brush
+    - BP43-1 - Floor Brush
+    - BP44 - Air Driven Turbo Brush BP99 - Extension Cord Strain Relief
+    - VACBP6 - HEPA Bag
+    - VACBP8 - Shakeout Bag
+    - BPFILPACK - Premotor and Exhaust Filter Set
+    - BPPLUGSET - Set of Hose and Filter Plugs
+  - sku: VACOMEGAH220
+    name: Пылесос Atrix Omega Plus Abatement HEPA (230 В)
+    desc: Промышленный HEPA-пылесос для работ по демонтажу и промсанитарии. Тихий мотор Ametek Advantek II, сертификаты CE и TÜV. Входная ступень для подрядчиков по опасной пыли.
+    tags: промышленный пылесос Atrix, купить в Казахстане, HEPA фильтрация, официальный дистрибьютор
+    en: Omega Plus Abatement Vacuum (230V)
+    kit:
+    - Same features as VACOMEGAH except with Quiet Ametek Advantek II Motor. NO Power Cord. CE and TUV approved.
+  - sku: VACOS220IPMF
+    name: HEPA-пылесос Atrix Omega Green Supreme IPM (230 В)
+    desc: 'Пылесос для пест-контроля и протоколов IPM: HEPA-удержание насекомых, аллергенов и остатков пестицидов без распыления в воздух. Стандарт для гостиниц и пищевых производств HACCP.'
+    tags: промышленный пылесос Atrix, купить в Казахстане, HEPA фильтрация, официальный дистрибьютор
+    en: Omega Green Supreme IPM HEPA Vacuum (230V)
+    kit:
+    - 66021A- 230V Detachable European Power Cord
+    - AVPA011- Utility Nozzle
+    - 31652- Crevice Tool Brush
+    - 730030- Crevice Tool
+    - 31657- Flexible Gooseneck Tool
+    - AVPA008- 5.6' Clear Hose
+    - AVPA005- Hose Plugs (2)
+    - UE7022BK- 18" Extension Wand (2)
+    - OF612HE- Immediate Containment HEPA Filter Cartridge
+    - 410017- Filter Plug
+    - AVPA016- Adjustable Shoulder Strap
+  - sku: VACBP2
+    name: Рюкзачный HEPA-пылесос Atrix Ergo Pro, расширенная комплектация (230 В)
+    desc: 'Версия Ergo Pro с расширенным набором аксессуаров: два HEPA-мешка в комплекте, вытряхной мешок, набор предмоторного и выхлопного фильтров. Для профессиональных клининговых бригад.'
+    tags: промышленный пылесос Atrix, купить в Казахстане, HEPA фильтрация, официальный дистрибьютор
+    en: Ergo Pro Backpack HEPA Vacuum (230V)
+    kit:
+    - VACBPAI39- 5.5'Hose
+    - VACBPAI37- Hose End Extension
+    - VACBPAI38- Utensil End Extension
+    - VACBPAI34- Floor Tool with Scallops
+    - VACBPAI35- Floor Tool, Bristles
+    - VACBPAI36- Crevice Tool
+    - VACBPAI33- Oval Brush
+    - VACBPAI32- Upholstery Brush
+    - BP99- Extension Cord Relief
+    - VACBP6- HEPA Bag (2)
+    - VACBP8- Shakeout Bag
+    - BPFILPACK- Premotor and Exhaust Filter Set
+  - sku: VACOMEGAS220FCT
+    name: HEPA-пылесос Atrix Omega Supreme Plus HEPA Electronic (230 В)
+    desc: Версия Omega Supreme Plus с HEPA-картриджем OF612HE немедленного удержания. ESD-защита 450 Вт — для ЦОД, серверных и зон с критичной электроникой.
+    tags: промышленный пылесос Atrix, купить в Казахстане, HEPA фильтрация, официальный дистрибьютор
+    en: Omega Supreme Plus HEPA Electronic Vacuum (230V)
+    kit:
+    - 66021A-230V Detachable European Power Cord
+    - 31652- Crevice Tool Brush
+    - 31654- ESD Safe Crevice Tool
+    - 31657- ESD Safe Flexible Gooseneck Tool
+    - 31661- 6'ESD Safe Stretch Hose
+    - OF612HE- Immediate Containment HEPA Filter Cartridge
+    - 410017- Filter Plug
+    - AVPA016- Adjustable Shoulder Strap
+  - sku: VACOMEGAS220F
+    name: ESD-пылесос Atrix Omega Supreme Plus Electronic (230 В)
+    desc: Пылесос для электроники с ESD-защитой и сетевым фильтром EMI/RFI. Картридж 31700C удерживает тонерную пыль. Для сервисных центров принтеров и МФУ, защиты платы форматтера.
+    tags: промышленный пылесос Atrix, купить в Казахстане, HEPA фильтрация, официальный дистрибьютор
+    en: Omega Supreme Plus Electronic Vacuum (230V)
+    kit:
+    - 66021A-230V Detachable European Power Cord
+    - 31652- Crevice Tool Brush
+    - 31654- ESD Safe Crevice Tool
+    - 31657- ESD Safe Flexible Gooseneck Tool
+    - 31661- 6'ESD Safe Stretch Hose
+    - 31700C- Immediate Containment Fine Filtration Filter Cartridge
+    - 410017- Filter Plug
+    - AVPA016- Adjustable Shoulder Strap
+  - sku: VACBPAI
+    name: Рюкзачный HEPA-пылесос Atrix Ergo Pro (230 В)
+    desc: 'Профессиональный рюкзачный пылесос с HEPA-фильтрацией для клининга бизнес-центров, ТРЦ, отелей и аэропортов. Полный комплект насадок: шланг 5,5 футов, двухсекционная алюминиевая трубка, насадки
+      для пола, ковров, щелей и мебели, HEPA-мешки.'
+    tags: промышленный пылесос Atrix, купить в Казахстане, HEPA фильтрация, официальный дистрибьютор
+    en: Ergo Pro HEPA Backpack Vacuum
+    kit:
+    - VACBPAI39- 5.5'Hose
+    - VACBPAI37- Hose End Extension
+    - VACBPAI38- Utensil End Extension
+    - VACBPAI34- Floor Tool with Scallops
+    - VACBPAI35- Floor Tool, Bristles
+    - VACBPAI36- Crevice Tool
+    - VACBPAI33- Oval Brush
+    - VACBPAI32- Upholstery Brush
+    - BP99- Extension Cord Relief
+    - VACBP6- HEPA Bag (2)
+    - VACBP8- Shakeout Bag
+    - BPFILPACK- Premotor and Exhaust Filter Set
+  - sku: VACEXP-04F
+    name: Пылесос Atrix Express Safety HEPA (230 В)
+    desc: Офисный ESD-пылесос с HEPA-картриджем немедленного удержания 730200. Для сервиса оргтехники с повышенными требованиями к фильтрации тонерной пыли.
+    tags: промышленный пылесос Atrix, купить в Казахстане, HEPA фильтрация, официальный дистрибьютор
+    en: Express Safety Vacuum (230V)
+    kit:
+    - 66021A- 230V European Detachable Power Cord
+    - 31652- Crevice Tool Brush
+    - 31653- ESD Safe Round Brush
+    - 31654- ESD Safe Crevice Tool
+    - 31257- ESD Safe Flexible Gooseneck Tool
+    - 31661- 6'ESD Safe Stretch Hose
+    - 730200- Immediate Containment HEPA Filter Cartridge
+    - 410017- Door Plug
+  - sku: VACEXP-03U
+    name: Тонер-пылесос Atrix Express Cartridge (230 В, UK)
+    desc: Версия Express Office с кабелем UK. ESD-защита, картриджный фильтр тонера, комплект насадок для сервиса печатной техники.
+    tags: промышленный пылесос Atrix, купить в Казахстане, HEPA фильтрация, официальный дистрибьютор
+    en: Express Cartridge Vacuum (230V)
+    kit:
+    - Same as VACEXP-03E with UK Power Cord
+  - sku: VACEXP-03F
+    name: Офисный тонер-пылесос Atrix Express Office (230 В)
+    desc: Компактный ESD-пылесос для обслуживания принтеров, МФУ и оргтехники. Картридж немедленного удержания мелкодисперсной пыли, ESD-насадки, европейский кабель 230 В. Входная модель для сервисных центров.
+    tags: промышленный пылесос Atrix, купить в Казахстане, HEPA фильтрация, официальный дистрибьютор
+    en: Express Office Vacuum (230V)
+    kit:
+    - 66021A- 230V European Detachable Power Cord
+    - 31652- Crevice Tool Brush
+    - 31653- ESD Safe Round Brush
+    - 31654- ESD Safe Crevice Tool
+    - 31257- ESD Safe Flexible Gooseneck Tool
+    - 31661- 6'ESD Safe Stretch Hose
+    - 710100- Immediate Containment Fine Filtration Filter Cartridge
+    - 410017- Door Plug
+- id: flt
+  name: Фильтры, пылесборники и заглушки
+  desc: 'Оригинальные фильтрующие картриджи Atrix SafeGuard 360: Ultrafine H12, HEPA H13 (в том числе с сертификатом EN 1822 и протоколом испытаний) и ULPA H14 с удержанием 99,999 % частиц 0,12 мкм. Баки-фильтры
+    High Capacity 5 и 7 галлонов, HEPA-мешки для рюкзачных серий Ergo, криминалистические фильтры, фильтры пылеотбора и заглушки немедленного удержания для безопасной транспортировки.'
+  items:
+  - sku: ATIBCVH1
+    name: Основной HEPA-фильтр антимикробного пылесоса Biocide
+    desc: Первичный HEPA-фильтр для антимикробного пылесоса Atrix Biocide Class 100 Cleanroom (ATIBCV2).
+    tags: оригинальный фильтр Atrix, HEPA H13, ULPA H14, расходники Atrix Казахстан
+    en: ''
+    kit: []
+  - sku: 421-000-008
+    name: Бак-фильтр Atrix High Capacity 5 гал ULPA H14
+    desc: '5-галлонный бак-фильтр с ULPA H14 фильтрацией: 99,999 % при 0,12 мкм. Для опасной пыли и критичных производств.'
+    tags: оригинальный фильтр Atrix, HEPA H13, ULPA H14, расходники Atrix Казахстан
+    en: ''
+    kit: []
+  - sku: ATIBCVH2
+    name: Вторичный HEPA-фильтр антимикробного пылесоса Biocide
+    desc: Второй HEPA-фильтр выхлопной ступени для пылесоса ATIBCV2. Двойная фильтрация — ноль вторичного загрязнения.
+    tags: оригинальный фильтр Atrix, HEPA H13, ULPA H14, расходники Atrix Казахстан
+    en: ''
+    kit: []
+  - sku: 421-000-007
+    name: Бак-фильтр Atrix 7 гал HEPA H13
+    desc: Увеличенный 7-галлонный сменный бак с HEPA H13 фильтром для максимальных объёмов пыли и тонера.
+    tags: оригинальный фильтр Atrix, HEPA H13, ULPA H14, расходники Atrix Казахстан
+    en: ''
+    kit: []
+  - sku: EF2
+    name: Выхлопной HEPA-фильтр Omega Cleanroom (2 шт.)
+    desc: Комплект из двух выхлопных HEPA-фильтров для пылесосов серии Omega Cleanroom. Обеспечивает фильтрованный выхлоп воздуха в чистых помещениях.
+    tags: оригинальный фильтр Atrix, HEPA H13, ULPA H14, расходники Atrix Казахстан
+    en: ''
+    kit: []
+  - sku: FILKIT
+    name: LED-индикатор заполнения фильтра Omega / High Capacity
+    desc: Комплект светодиодной индикации Full Filter Alert для пылесосов Omega и High Capacity. Заказывается вместе с пылесосом.
+    tags: оригинальный фильтр Atrix, HEPA H13, ULPA H14, расходники Atrix Казахстан
+    en: ''
+    kit: []
+  - sku: ATIBCVSF
+    name: Предфильтр Biocide из обработанного полиэстера
+    desc: Предварительный фильтр-сокрытие для основного HEPA-фильтра антимикробного пылесоса. Продлевает ресурс HEPA.
+    tags: оригинальный фильтр Atrix, HEPA H13, ULPA H14, расходники Atrix Казахстан
+    en: ''
+    kit: []
+  - sku: 421-000-005
+    name: Бак-фильтр Atrix High Capacity 5 гал HEPA H13
+    desc: 5-галлонный бак-фильтр с HEPA H13 фильтрацией для промышленных тонер-пылесосов High Capacity.
+    tags: оригинальный фильтр Atrix, HEPA H13, ULPA H14, расходники Atrix Казахстан
+    en: ''
+    kit: []
+  - sku: OF612HE-IC
+    name: HEPA-картридж Atrix SafeGuard 360 H13 с сертификатом EN 1822
+    desc: 'Сертифицированный по EN 1822 HEPA H13 картридж с протоколом испытаний: совпадение серийных номеров и подтверждённая эффективность. Для аудитов и аттестации чистых помещений.'
+    tags: оригинальный фильтр Atrix, HEPA H13, ULPA H14, расходники Atrix Казахстан
+    en: ''
+    kit: []
+  - sku: 421-000-002
+    name: Бак-фильтр Atrix High Capacity 5 гал Ultrafine H12
+    desc: Сменный 5-галлонный бак-фильтр немедленного удержания тонера и пыли для станций High Capacity. Большой объём — редкая замена.
+    tags: оригинальный фильтр Atrix, HEPA H13, ULPA H14, расходники Atrix Казахстан
+    en: ''
+    kit: []
+  - sku: SFU15/6
+    name: Фильтры для отбора проб пыли (6 шт.)
+    desc: Шестиместный комплект фильтров пылеотбора ATISF-U15 для санитарно-гигиенического контроля воздуха рабочей зоны.
+    tags: оригинальный фильтр Atrix, HEPA H13, ULPA H14, расходники Atrix Казахстан
+    en: ''
+    kit: []
+  - sku: OF712UL
+    name: ULPA-картридж Atrix SafeGuard 360 H14
+    desc: 'ULPA H14 картридж немедленного удержания: 99,999 % частиц при 0,12 мкм. Для пылесосов Omega Class H14 при работе с асбестом, свинцом и силикатной пылью.'
+    tags: оригинальный фильтр Atrix, HEPA H13, ULPA H14, расходники Atrix Казахстан
+    en: ''
+    kit: []
+  - sku: '730333'
+    name: HEPA-фильтр Atrix Express H13 (2 шт.)
+    desc: Комплект из двух HEPA H13 картриджей (2×730200) для пылесосов серии Express. Запас на плановую замену.
+    tags: оригинальный фильтр Atrix, HEPA H13, ULPA H14, расходники Atrix Казахстан
+    en: ''
+    kit: []
+  - sku: ATIBCVBAG
+    name: Бумажные мешки для антимикробного пылесоса (5 шт.)
+    desc: Пятиместный комплект бумажных пылесборников для пылесоса Atrix Biocide Cleanroom.
+    tags: оригинальный фильтр Atrix, HEPA H13, ULPA H14, расходники Atrix Казахстан
+    en: ''
+    kit: []
+  - sku: VACBP6-10P
+    name: HEPA-мешки для рюкзачных пылесосов Ergo / Ergo Pro (10 шт.)
+    desc: Десятиместная упаковка HEPA-пылесборников для рюкзачных пылесосов серий Ergo и Ergo Pro.
+    tags: оригинальный фильтр Atrix, HEPA H13, ULPA H14, расходники Atrix Казахстан
+    en: ''
+    kit: []
+  - sku: OF612HE
+    name: HEPA-картридж Atrix SafeGuard 360 H13
+    desc: Сменный HEPA H13 картридж немедленного удержания для пылесосов Omega Supreme Plus HEPA и Express Safety. Максимальная фильтрация тонерной и аллергенной пыли.
+    tags: оригинальный фильтр Atrix, HEPA H13, ULPA H14, расходники Atrix Казахстан
+    en: ''
+    kit: []
+  - sku: VACBPFB-12P
+    name: Плоские HEPA-мешки для рюкзачных пылесосов Ergo и Jet Red (12 шт.)
+    desc: Упаковка из 12 плоских HEPA-пылесборников для рюкзачных пылесосов Ergo и Jet Red.
+    tags: оригинальный фильтр Atrix, HEPA H13, ULPA H14, расходники Atrix Казахстан
+    en: ''
+    kit: []
+  - sku: FFUT
+    name: Криминалистический фильтр-мешок с универсальной насадкой
+    desc: 'Набор для сбора следовых доказательств: вакуумный фильтр, мешок и утилитарная насадка. Криминалистика и экспертиза.'
+    tags: оригинальный фильтр Atrix, HEPA H13, ULPA H14, расходники Atrix Казахстан
+    en: ''
+    kit: []
+  - sku: FFCT
+    name: Криминалистический фильтр-мешок с щелевой насадкой
+    desc: 'Набор для сбора микрочастиц и следовых улик: вакуумный фильтр, мешок и щелевой инструмент. Для криминалистических лабораторий.'
+    tags: оригинальный фильтр Atrix, HEPA H13, ULPA H14, расходники Atrix Казахстан
+    en: ''
+    kit: []
+  - sku: '710333'
+    name: Фильтр Atrix Express Ultrafine H12 (2 шт.)
+    desc: Пара картриджей Ultrafine H12 (эквивалент 2×710100) для пылесосов Express. Экономичная упаковка для сервисных центров.
+    tags: оригинальный фильтр Atrix, HEPA H13, ULPA H14, расходники Atrix Казахстан
+    en: ''
+    kit: []
+  - sku: VACBP6-5P
+    name: HEPA-мешки для рюкзачных пылесосов Ergo / Ergo Pro (5 шт.)
+    desc: Комплект из пяти HEPA-мешков для рюкзачных пылесосов Ergo и Ergo Pro.
+    tags: оригинальный фильтр Atrix, HEPA H13, ULPA H14, расходники Atrix Казахстан
+    en: ''
+    kit: []
+  - sku: '730200'
+    name: HEPA-картридж Atrix Express (bulk)
+    desc: HEPA-картридж немедленного удержания для пылесоса Express Safety. Высокая фильтрация тонера и аллергенов.
+    tags: оригинальный фильтр Atrix, HEPA H13, ULPA H14, расходники Atrix Казахстан
+    en: ''
+    kit: []
+  - sku: BPFILPACK
+    name: 'Набор фильтров Ergo / Ergo Pro: предмоторный HEPA + выхлопной'
+    desc: Комплект предмоторного HEPA-фильтра и выхлопного фильтра для рюкзачных пылесосов серий Ergo и Ergo Pro.
+    tags: оригинальный фильтр Atrix, HEPA H13, ULPA H14, расходники Atrix Казахстан
+    en: ''
+    kit: []
+  - sku: 31700C
+    name: Фильтр-картридж Atrix SafeGuard 360 Ultrafine H12 (bulk)
+    desc: Картридж немедленного удержания мелкодисперсной пыли и тонера для пылесосов Omega Supreme и Express. Класс фильтрации H12.
+    tags: оригинальный фильтр Atrix, HEPA H13, ULPA H14, расходники Atrix Казахстан
+    en: ''
+    kit: []
+  - sku: '710100'
+    name: Фильтр-картридж тонера Atrix Express (bulk)
+    desc: Сменный картридж мелкой фильтрации для пылесосов серии Express. Немедленное удержание тонерной пыли при сервисе принтеров и МФУ.
+    tags: оригинальный фильтр Atrix, HEPA H13, ULPA H14, расходники Atrix Казахстан
+    en: ''
+    kit: []
+  - sku: 751-200-025
+    name: Коробка серии HCTV
+    desc: Оригинальная коробка серии HCTV для хранения и перевозки оборудования и расходников.
+    tags: оригинальный фильтр Atrix, HEPA H13, ULPA H14, расходники Atrix Казахстан
+    en: ''
+    kit: []
+  - sku: VACBP8
+    name: Вытряхной многоразовый мешок Ergo / Ergo Pro
+    desc: Многоразовый вытряхной пылесборник для рюкзачных пылесосов серий Ergo и Ergo Pro. Снижает расходы на одноразовые мешки.
+    tags: оригинальный фильтр Atrix, HEPA H13, ULPA H14, расходники Atrix Казахстан
+    en: ''
+    kit: []
+  - sku: 751-200-009
+    name: Коробка для фильтров серии HCTV
+    desc: Оригинальная упаковочная коробка для фильтров серии HCTV — безопасное хранение и транспортировка.
+    tags: оригинальный фильтр Atrix, HEPA H13, ULPA H14, расходники Atrix Казахстан
+    en: ''
+    kit: []
+  - sku: BPPLUGSET
+    name: Комплект заглушек рюкзачных пылесосов Ergo
+    desc: Набор заглушек шланга и фильтра для рюкзачных HEPA-пылесосов серии Ergo. Предотвращает рассыпание пыли при переноске.
+    tags: оригинальный фильтр Atrix, HEPA H13, ULPA H14, расходники Atrix Казахстан
+    en: ''
+    kit: []
+  - sku: '410017'
+    name: Заглушка фильтра Omega и дверцы Express
+    desc: Универсальная одноразовая заглушка воздухозаборника фильтра Omega и дверцы пылесосов Express. Безопасная утилизация пыли.
+    tags: оригинальный фильтр Atrix, HEPA H13, ULPA H14, расходники Atrix Казахстан
+    en: ''
+    kit: []
+  - sku: AVPA004
+    name: Оранжевая заглушка выхлопа фильтра Omega
+    desc: Заглушка выхлопного патрубка фильтра пылесосов Omega. Герметизация при транспортировке.
+    tags: оригинальный фильтр Atrix, HEPA H13, ULPA H14, расходники Atrix Казахстан
+    en: ''
+    kit: []
+  - sku: AVPA005
+    name: Красная заглушка шланга
+    desc: Концевая заглушка шланга пылесосов Atrix. Исключает распыление содержимого при переноске.
+    tags: оригинальный фильтр Atrix, HEPA H13, ULPA H14, расходники Atrix Казахстан
+    en: ''
+    kit: []
