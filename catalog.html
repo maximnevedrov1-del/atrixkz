@@ -249,7 +249,7 @@ footer{margin-top:96px;border-top:1px solid var(--border);padding:56px 32px;text
 
 <main>
 
-{% assign allcats = site.data.catalog_a | concat: site.data.catalog_b | concat: site.data.catalog_c %}{% for cat in allcats %}
+{% assign modelpages = "VACBPAI,VACBP2,VACBPAIC,VACBPAI400,VACBP400,ATIHCTV5E,ATIHCTV5F,ATIBCV2,VACEXP-03F,VACEXP-03U,VACEXP-04F,VACOMEGAS220FCT,VACOMEGAH220,VACOS220IPMF,VACOMEGAS2ECRH,VACOMEGAS2ECRU,VACOS220MRI,VACO22VUM2F,VACOMEGAS220F,VACOMEGAUM2F,VACO22VDC,VACO22VESD" | split: "," %}{% assign allcats = site.data.catalog_a | concat: site.data.catalog_b | concat: site.data.catalog_c %}{% for cat in allcats %}
 <section class="cat" id="cat-{{ cat.id }}" aria-labelledby="h-{{ cat.id }}">
   <div class="cat-head">
     <h2 id="h-{{ cat.id }}"><span class="cat-idx">{{ cat.id | upcase }}</span>{{ cat.name | escape }}<span class="cat-count">{{ cat.items | size }}</span></h2>
@@ -269,6 +269,7 @@ footer{margin-top:96px;border-top:1px solid var(--border);padding:56px 32px;text
       <p class="p-tags">{{ item.tags | escape }}</p>
       {% if item.en != '' %}<div class="en-spec"><div class="en-title">{{ item.en | escape }}</div>{% if item.kit.size > 0 %}<ul class="kit">{% for k in item.kit %}<li>{{ k | escape }}</li>{% endfor %}</ul>{% endif %}</div>{% endif %}
       <div class="p-meta"><span>Бренд: Atrix International (США)</span><span>Артикул: {{ item.sku | escape }}</span><span>Цена: по запросу</span></div>
+      {% if modelpages contains item.sku %}<a class="p-cta" href="/{{ item.sku | downcase }}.html" itemprop="url">Подробнее о модели, фото и комплектация →</a><br>{% endif %}
       <a class="p-cta" href="mailto:info@atrixkz.kz?subject=Запрос%20цены%20{{ item.sku | uri_escape }}">Запросить цену и наличие →</a>
     </div>
   </article>
